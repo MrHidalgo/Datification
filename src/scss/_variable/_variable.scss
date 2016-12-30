@@ -1,0 +1,42 @@
+////
+/// @group  Variable
+////
+
+///
+/// @name   object
+///
+
+// Proxima Nova --> PN
+// Proxima Nova Cond--> PNC
+// Proxima Nova ExCn --> PNEC
+
+$object : (
+	color : (
+		white             : #fff,
+		black             : #000
+	),
+
+	fonts : (
+		PN_black          : "Proxima Nova Black",
+		PN_bold           : "Proxima Nova Bold",
+		PN_extraBold      : "Proxima Nova Extrabold",
+		PN_light          : "Proxima Nova Light",
+		PN_regular        : "Proxima Nova Regular",
+		PN_semibold       : "Proxima Nova Semibold",
+		PN_thin           : "Proxima Nova Thin",
+		PNC_black         : "ProximaNovaCond-Black",
+		PNC_bold          : "ProximaNovaCond-Bold",
+		PNC_regular       : "ProximaNovaCond-Reg",
+		PNEC_black        : "ProximaNovaExCn-Black",
+		PNEC_bold         : "ProximaNovaExCn-Bold",
+		PNEC_light        : "ProximaNovaExCn-Light",
+		PNEC_regular      : "ProximaNovaExCn-Reg",
+		PNEC_semibold     : "ProximaNovaExCn-Sbold",
+		PNEC_thin         : "ProximaNovaExCn-Thin",
+		PNEC_extraBold    : "ProximaNovaExCn-Xbold"
+	),
+
+	dimension : (
+		all       : 100%
+	),
+);

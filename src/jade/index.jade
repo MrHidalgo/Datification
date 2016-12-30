@@ -1,0 +1,24 @@
+include _mixin/mixin
+
+
+doctype html
+html(lang="en")
+
+
+    +headSite("Datification", linkSite.styleLink, "")
+
+
+    body
+
+
+        //- BLOCK HEADER [nav, bottomInfo, logo, slogan]
+        block header
+
+
+        //- BLOCK FOOTER
+        block footer
+
+
+
+        - for(var i = 0; i < linkSite.scriptLink.length; i++)
+            script(src= linkSite.scriptLink[i])
