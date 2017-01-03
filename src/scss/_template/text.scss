@@ -1,0 +1,77 @@
+///
+/// IMPORT BLOCK
+///
+@import "../_mixin/mixin";
+@import "../_function/function";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-shakespeare      : return-value(color, shakespeare);
+
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN
+///
+.text {
+	position: relative;
+	padding-top: 80px;
+	margin-bottom: 60px;
+	border-top: 1px solid $c-shakespeare;
+	border-bottom: 1px solid $c-shakespeare;
+	min-height: 500px;
+	background-image: url("../img/img-text.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	@include respond-to(small-all) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+
+	&:before {
+		content: "";
+		position: absolute;
+		@include mixinDimensions($w-all);
+		top: 0;
+		left: 0;
+		background: -moz-linear-gradient(left,  rgba(49,49,49,0.95) 1%, rgba(40,40,40,0.95) 35%, rgba(0,0,0,0) 100%);
+		background: -webkit-linear-gradient(left,  rgba(49,49,49,0.95) 1%,rgba(40,40,40,0.95) 35%,rgba(0,0,0,0) 100%);
+		background: linear-gradient(to right,  rgba(49,49,49,0.95) 1%,rgba(40,40,40,0.95) 35%,rgba(0,0,0,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2313131', endColorstr='#00000000',GradientType=1 );
+	}
+
+
+	&__row {
+		width: 50%;
+		@include respond-to(medium) {
+			width: 80%;
+		}
+		@include respond-to(small-all) {
+			width: 100%;
+		}
+	}
+
+
+	&__title {
+		color: $c-shakespeare;
+		font: {
+			size: 25px;
+			family: $f-PN_bold;
+		}
+		margin-bottom: 60px;
+		@include respond-to(small-all) {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+
+	&__desc {
+		color: $c-white;
+		margin-bottom: 40px;
+	}
+}

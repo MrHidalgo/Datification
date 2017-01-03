@@ -325,12 +325,17 @@
       @content
     }
   }
+  @else if ($media == 'medium-min') {
+    @media screen and (min-width: 768px) {
+      @content
+    }
+  }
   @else if ($media == 'medium-all') {
     @media screen and (max-width: 991px) {
       @content
     }
   }
-  @else if ($media == 'medium-min') {
+  @else if ($media == 'large-min') {
     @media screen and (min-width: 991px) {
       @content
     }

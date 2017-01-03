@@ -1,0 +1,19 @@
+-
+    var navLink = [
+        "Главная",
+        "Статьи",
+        "Словарь",
+        "Партнеры"
+    ];
+
+
+nav.nav.clearfix
+    ul.nav__list.clearfix
+        -for(var i = 0; i < navLink.length; i++)
+            li.nav__item
+                a(href="javascript:void(0);", class="nav__link")!= navLink[i]
+
+    a(href="javascript:void(0);", class="nav__link-mobile")
+        span.nav__link-line.nav__link-line-0
+        span.nav__link-line.nav__link-line-1
+        span.nav__link-line.nav__link-line-2

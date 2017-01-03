@@ -1,0 +1,83 @@
+///
+/// IMPORT BLOCK
+///
+@import "../_mixin/mixin";
+@import "../_function/function";
+
+@import "./_macros/logotype";
+@import "./_macros/nav";
+@import "./_macros/search";
+@import "./_macros/lang";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-eclipse          : return-value(color, eclipse);
+///
+/// MAIN BLOCK
+///
+.header {
+	height: 110px;
+	padding-top: (110 - 56) * 1px;
+	margin-bottom: 80px;
+	@include respond-to(small-all) {
+		height: 60px;
+		padding-top: (60 - 29) * 1px;
+		margin-bottom: 30px;
+	}
+
+
+	&__row {
+		height: 56px;
+		@include respond-to(small-all) {
+			height: 29px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 320px;
+		}
+	}
+}
+
+
+.logotype,
+.nav,
+.search,
+.lang {
+	display: inline-block;
+	margin-right: -.32em;
+	vertical-align: top;
+
+	height: 56px;
+	@include respond-to(small-all) {
+		height: 29px;
+	}
+}
+
+
+.nav,
+.search,
+.lang {
+	border-top: 2px solid $c-eclipse;
+	border-bottom: 2px solid $c-eclipse;
+	border-right: 2px solid $c-eclipse;
+	@include respond-to(small-all) {
+		border-width: 1px;
+	}
+}
+
+
+.nav {
+	@include respond-to(small-all) {
+		width: 40px;
+	}
+}
+
+
+.search,
+.lang {
+	@include respond-to(small-all) {
+		width: 31px;
+	}
+}

@@ -1,0 +1,170 @@
+///
+/// IMPORT BLOCK
+///
+@import "../_mixin/mixin";
+@import "../_function/function";
+
+@import "../_variable/sprite_dat";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-cerulean         : return-value(color, cerulean);
+$c-dim_gray         : return-value(color, dim_gray);
+$c-nobel            : return-value(color, nobel);
+
+$f-PN_black         : return-value(fonts, PN_black);
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.dictionary {
+	position: relative;
+	min-height: 360px;
+	background-color: $c-white;
+	border-top: 2px solid $c-cerulean;
+	border-bottom: 2px solid $c-cerulean;
+	margin-top: 100px;
+
+
+	&__container {
+		display: flex;
+		align-items: center;
+		min-height: 360px;
+	}
+
+
+	&__title {
+		font: {
+			size: 35px;
+			family: $f-PN_black;
+		}
+		color: $c-cerulean;
+		text-transform: uppercase;
+		position: absolute;
+		left: 0;
+		top: -30px;
+		line-height: 1;
+	}
+
+
+	&__latter {
+		position: absolute;
+		top: -27px;
+		right: 0;
+		height: 27px;
+	}
+
+
+	&__list {
+		float: left;
+		text-align: center;
+
+
+		&.active {
+			.dictionary__btn {
+				border-left: 2px solid $c-cerulean;
+				border-top: 2px solid $c-cerulean;
+				border-right: 2px solid $c-cerulean;
+				color: $c-cerulean;
+			}
+		}
+	}
+
+
+	&__btn {
+		float: left;
+		text-transform: uppercase;
+		border-left: 2px solid transparent;
+		border-top: 2px solid transparent;
+		border-right: 2px solid transparent;
+		transition: all .3s ease-in-out;
+		color: $c-dim_gray;
+		@include mixinDimensions(27px);
+	}
+
+
+	&__row {
+		display: flex;
+		flex-flow: wrap row;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	&__left {
+		border-right: 1px solid $c-nobel;
+	}
+
+
+	&__left,
+	&__right {
+		width: 50%;
+		padding: 20px 30px;
+	}
+
+
+	&__list-link {
+		width: 50%;
+		display: inline-block;
+		margin-right: -.32em;
+	}
+
+
+	&__btn-link {
+		display: inline-block;
+		height: 40px;
+		font-size: 18px;
+		color: $c-cerulean;
+	}
+
+
+	&__sub-title {
+		font: {
+			size: 25px;
+			family: $f-PN_bold;
+		}
+		margin-bottom: 40px;
+
+
+		&_first {
+			position: relative;
+			background-color: $c-cerulean;
+			color: $c-white;
+			padding: 5px 5px 5px 15px;
+
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: -13px;
+				right: -18px;
+				@include retina-sprite($sp-i-dictionary-group);
+			}
+		}
+	}
+
+
+	&__sub-desc {
+		font: {
+			size: 18px;
+		}
+
+
+		&_first {
+			position: relative;
+			color: $c-cerulean;
+
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 1px;
+				left: -25px;
+				@include retina-sprite($sp-i-dictionary-group);
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+///
+/// MAIN BLOCK
+///
+.logotype {
+
+
+	&__img {
+		@include respond-to(small-all) {
+			display: none;
+		}
+	}
+
+
+	&__img-mobile {
+		display: none;
+		@include respond-to(small-all) {
+			display: block;
+		}
+	}
+}

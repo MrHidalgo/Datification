@@ -19,3 +19,33 @@ mixin headSite(titleName, styleFile, arrFontName)
         //- LINK FONTS
         - for(var j = 0, arrFontNameLength = arrFontName.length; j < arrFontNameLength; j++)
             link(href= arrFontName[j], rel='stylesheet')
+
+
+//- NEWS BLOCK
+mixin newsBLock(className, title)
+    div(class="block clearfix " + className)
+        .block__img-wrap
+            img(src="./img/img-block-0.png", class="block__img", alt="", title="")
+
+        .block__text-wrap
+            p.block__title!= title
+
+            hr.block__line
+
+            .block__info.clearfix
+                p.block__info-data
+                    i.icon
+                    | 4.12.2016
+                p.block__info-see
+                    i.icon
+                    | 2648
+
+
+mixin blockNewsLoop(countNum, addClassCount, className)
+    .blocks__row
+        -for(var i = 0; i < countNum; i++)
+            if(i < addClassCount)
+                +newsBLock("", "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.")
+            else
+                +newsBLock(className, "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.")
+

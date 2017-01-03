@@ -1,0 +1,25 @@
+-
+    var advertisingText = [
+        "Название вакансии которое может занимать несколько строчек",
+        "Название вакансии которое может занимать несколько строчек Название вакансии которое может занимать несколько строчек Название вакансии которое может занимать несколько строчек",
+        "Название вакансии которое может"
+    ];
+
+
+.advertising
+    .advertising__top
+
+    .advertising__bottom
+        p.advertising__title!= "Горячие вакансии"
+
+        .advertising__wrap
+            ul.advertising__list
+                -for(var i = 0; i < advertisingText.length; i++)
+                    li.advertising__item.clearfix
+                        .advertising__img-wrap
+                            img(src="./img/img-advertising.png", alt="", title="", class="advertising__img")
+                        .advertising__text-wrap
+                            p.advertising__text!= advertisingText[i]
+
+        .advertising__btn-wrap
+            a(href="javascript:void(0);", class="advertising__btn")!= "Все вакансии"

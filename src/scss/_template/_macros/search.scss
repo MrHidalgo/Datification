@@ -1,0 +1,117 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+
+@import "../../_variable/sprite_dat";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-cerulean         : return-value(color, cerulean);
+$c-night_rider      : return-value(color, night_rider);
+
+$f-PN_regular       : return-value(fonts, PN_regular);
+///
+/// MAIN BLOCK
+///
+.search {
+	position: relative;
+	width: 60px;
+
+
+	&.active {
+		.search__btn {
+			@include respond-to(medium-min) {
+				background-color: $c-cerulean;
+			}
+		}
+	}
+
+
+	&__btn {
+		display: block;
+		width: 57px;
+		float: right;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		@include respond-to(small-all) {
+			width: 29px;
+			height: 27px;
+			padding: 0;
+		}
+
+
+		&:hover {
+			background-color: $c-shakespeare;
+			transition: all .3s ease-in-out;
+		}
+
+
+		&-icon {
+			display: inline-block;
+			vertical-align: middle;
+			@include retina-sprite($sp-i-search-group);
+			@include respond-to(small-all) {
+				position: relative;
+				top: 1px;
+				@include retina-sprite($sp-i-search-mobile-group);
+			}
+		}
+	}
+
+
+	&__form {
+		display: none;
+		position: absolute;
+		@include mixinDimensions(619px, 52px);
+		left: -620px;
+		top: 0;
+		@include respond-to(large) {
+			width: 359px;
+			left: -360px;
+		}
+		@include respond-to(medium) {
+			width: 559px;
+			left: -560px;
+		}
+		@include respond-to(small-all) {
+			width: (220 + 39) * 1px;
+			height: 27px;
+			left: auto;
+			right: 30px;
+		}
+	}
+
+
+	&__input {
+		@include mixinDimensions($w-all);
+		background-color: $c-white_smoke;
+		border: none;
+		font: {
+			family: $f-PN_regular;
+			size: 16px;
+		}
+		color: $c-night_rider;
+		padding-left: 40px;
+		padding-right: 20px;
+		@include respond-to(large) {
+			padding-left: 20px;
+		}
+		@include respond-to(small-all) {
+			padding-left: 20px;
+		}
+	}
+}
+
+
+input[name="search"]::-webkit-input-placeholder {color: $c-night_rider;}
+input[name="search"]::-moz-placeholder {color: $c-night_rider;}
+input[name="search"]:-moz-placeholder {color: $c-night_rider;}
+input[name="search"]::placeholder {color: $c-night_rider;}

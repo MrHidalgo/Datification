@@ -1,0 +1,133 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+
+@import "../../_variable/sprite_dat";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-eclipse          : return-value(color, eclipse);
+$c-shakespeare      : return-value(color, shakespeare);
+
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.lang {
+	position: relative;
+	width: 65px;
+
+
+	&.active {
+		.lang__btn-icon {
+			@include retina-sprite($sp-i-lang-a-group);
+			@include respond-to(small-all) {
+				display: none;
+			}
+		}
+	}
+
+
+	&__btn {
+		display: inline-block;
+		vertical-align: top;
+		@include mixinDimensions($w-all);
+		padding-left: 10px;
+		line-height: 52px;
+		text-transform: uppercase;
+		font: {
+			family: $f-PN_bold;
+		}
+		@include respond-to(small-all) {
+			line-height: 29px;
+			font-size: 12px;
+			padding-left: 8px;
+		}
+
+
+		&:hover {
+			.lang__btn-icon {
+				opacity: 0;
+				transition: all .3s ease-in-out;
+				@include respond-to(small-all) {
+					opacity: 1;
+				}
+
+
+				&_hover {
+					opacity: 1;
+					transition: all .3s ease-in-out;
+				}
+			}
+		}
+
+
+		&-icon {
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			top: -1px;
+			margin-left: 7px;
+			@include retina-sprite($sp-i-lang-n-group);
+			@include respond-to(small-all) {
+				display: none;
+			}
+
+
+			&_hover {
+				position: absolute;
+				top: -1px;
+				bottom: 0;
+				right: 5px;
+				margin: auto;
+				@include retina-sprite($sp-i-lang-h-group);
+				opacity: 0;
+				@include respond-to(small-all) {
+					display: none;
+				}
+			}
+		}
+	}
+
+
+	&__drop {
+		display: none;
+		position: absolute;
+		background-color: $c-white_smoke;
+		z-index: 11;
+		left: -1px;
+		width: 66px;
+		border: 2px solid $c-eclipse;
+		@include respond-to(small-all) {
+			border-width: 1px;
+			left: auto;
+			right: -1px;
+			width: 61px;
+			background-color: $c-white;
+		}
+
+
+		&-btn {
+			display: block;
+			height: 52px;
+			line-height: 52px;
+			padding-left: 10px;
+			text-transform: uppercase;
+			font: {
+				family: $f-PN_bold;
+			}
+
+
+			&:hover {
+				color: $c-shakespeare;
+				transition: all .3s ease-in-out;
+			}
+		}
+	}
+}

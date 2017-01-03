@@ -10,14 +10,46 @@ html(lang="en")
 
     body
 
-
         //- BLOCK HEADER [nav, bottomInfo, logo, slogan]
-        block header
+        //block header
+            include ./_template/header
+
+
+        //.blocks
+            a(href="javascript:void(0);", class="btn__fb")
+
+            .container.clearfix
+                .blocks__left
+
+                    +blockNewsLoop(4, 2, "block_hide")
+
+                .blocks__right
+                    include ./_template/advertising
+
+
+        //block text
+            include ./_template/text
+
+
+        //.container
+            +blockNewsLoop(6, 4, "block_hide")
+
+
+        block dictionary
+            include ./_template/dictionary
+
+
+        //.container
+            +blockNewsLoop(3, 2, "block_hide")
+
+
+        block events
+            include ./_template/events
 
 
         //- BLOCK FOOTER
         block footer
-
+            include ./_template/footer
 
 
         - for(var i = 0; i < linkSite.scriptLink.length; i++)

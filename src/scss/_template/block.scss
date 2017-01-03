@@ -1,0 +1,67 @@
+///
+/// IMPORT BLOCK
+///
+@import "../_mixin/mixin";
+@import "../_function/function";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+///
+/// MAIN BLOCK
+///
+.blocks {
+	position: relative;
+
+
+	&__left {
+		width: calc(100% - 300px);
+		padding-right: 40px;
+		@include respond-to(large) {
+			padding-right: 0;
+		}
+	}
+
+
+	&__right {
+		width: 300px;
+	}
+
+
+	&__left,
+	&__right {
+		float: left;
+		@include respond-to(small-all) {
+			width: 100%;
+			float: none;
+			padding: 0;
+		}
+	}
+
+
+	&__row {
+		display: flex;
+		flex-flow: wrap row;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+}
+
+
+.blocks {
+	.blocks__row {
+		@include respond-to(medium) {
+			justify-content: flex-start;
+		}
+	}
+}
+
+body {
+	.blocks__row {
+		@include respond-to(medium) {
+			justify-content: space-between;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+-
+    var langLink = [
+        "ua",
+        "eng"
+    ];
+
+
+.lang
+    a(href="javascript:void(0);", class="lang__btn")
+        | ru
+        i.icon.lang__btn-icon
+        span.lang__btn-icon_hover
+
+    .lang__drop
+        ul.lang__list
+            -for(var i = 0; i < langLink.length; i++)
+                li.lang__item
+                    a(href="javascript:void(0);", class="lang__drop-btn")!= langLink[i]

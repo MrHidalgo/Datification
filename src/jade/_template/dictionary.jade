@@ -1,0 +1,52 @@
+-
+    var dictionaryLatter = [
+        "а", "б", "в", "г", "д",
+        "е", "ё", "ж", "з", "и",
+        "й", "к", "л", "м", "н",
+        "о", "п", "р", "с", "т",
+        "у", "ф", "х", "ц", "ч",
+        "ш", "щ", "ъ", "ы", "ь",
+        "э", "ю", "я"
+    ];
+
+    var dictionaryLink = [
+        "Еще один толчок",
+        "Третий толчок",
+        "Толчище",
+        "Толчок в квадрате",
+        "Еще один толчок",
+        "Третий толчок",
+        "Толчище",
+        "Толчок в квадрате"
+    ];
+
+
+
+.dictionary
+    .container.dictionary__container
+
+        .dictionary__top
+            p.dictionary__title!= "Словарь"
+
+            .dictionary__latter
+                ul.dictionary__list
+                    -for(var i = 0; i < dictionaryLatter.length; i++)
+                        if(i === 19)
+                            li.dictionary__list.clearfix.active
+                                a(href="javascript:void(0);", class="dictionary__btn")!= dictionaryLatter[i]
+                        else
+                            li.dictionary__list.clearfix
+                                a(href="javascript:void(0);", class="dictionary__btn")!= dictionaryLatter[i]
+
+
+        .dictionary__row
+            .dictionary__left
+                p.dictionary__sub-title!= "<span class='dictionary__sub-title_first'>Толчок</span> предпринимательству развивающихся рынков: Seedstars World едут в Украину."
+
+                p.dictionary__sub-desc!= "<span class='dictionary__sub-desc_first'>Толчок</span> - туалет, помещение для справления естественных нужд человека"
+
+            .dictionary__right
+                ul.dictionary__item-link
+                    - for(var j = 0; j < dictionaryLink.length; j++)
+                        li.dictionary__list-link
+                            a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryLink[j]

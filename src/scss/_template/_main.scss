@@ -9,6 +9,7 @@
 $w-all              : return-value(dimension, all);
 
 $c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
 
 $PN_regular         : return-value(fonts, PN_regular);
 ///
@@ -39,7 +40,10 @@ body{
 
 	font-family: $PN_regular;
 
-	background-color: $c-white;
+	background-color: $c-white_smoke;
+	@include respond-to(medium-all) {
+		background-color: $c-white;
+	}
 
 
 	&.open-menu {

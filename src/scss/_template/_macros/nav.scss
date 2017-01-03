@@ -1,0 +1,188 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-night_rider      : return-value(color, night_rider);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-cerulean         : return-value(color, cerulean);
+$c-eclipse          : return-value(color, eclipse);
+
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.nav {
+	width: 622px;
+	@include respond-to(large) {
+		width: 362px;
+	}
+	@include respond-to(medium) {
+		width: 142px;
+	}
+
+
+	&.active {
+		.nav__list {
+			display: block;
+			position: absolute;
+			background-color: $c-white_smoke;
+			z-index: 11;
+			top: 56px;
+			width: calc(100% - 32px);
+			height: auto;
+			left: 15px;
+			padding-top: 50px;
+			padding-left: 50px;
+			padding-right: 50px;
+			border-left: 2px solid $c-eclipse;
+			border-bottom: 2px solid $c-eclipse;
+			border-right: 2px solid $c-eclipse;
+			@include respond-to(small-all) {
+				top: 29px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				width: 320px;
+				padding: 30px 15px 0;
+				border-width: 1px;
+				background-color: $c-white;
+			}
+		}
+
+
+		.nav__link {
+			width: 50%;
+			margin-bottom: 50px;
+			float: left;
+			@include respond-to(small-all) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+
+	&__list {
+		height: 52px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		@include respond-to(medium-all) {
+			display: none;
+		}
+	}
+
+
+	&__item {
+		&.active {
+			.nav__link {
+				color: $c-cerulean;
+			}
+		}
+	}
+
+
+	&__link {
+		text-transform: uppercase;
+		color: $c-night_rider;
+		font: {
+			family: $f-PN_bold;
+		}
+		@include respond-to(large) {
+			font-size: 14px;
+		}
+
+
+		&:hover {
+			color: $c-shakespeare;
+			transition: all .3s ease-in-out;
+		}
+
+
+		&-mobile {
+			display: none;
+			position: relative;
+			float: right;
+			margin-top: 13.5px;
+			margin-right: 25px;
+			@include mixinDimensions(36px, 25px);
+			@include respond-to(medium-all) {
+				display: block;
+			}
+			@include respond-to(small-all) {
+				margin-top: 6.5px;
+				margin-right: 10px;
+				@include mixinDimensions(19px, 15px);
+			}
+
+
+			&.active {
+				.nav__link-line {
+
+
+					&-0,
+					&-1,
+					&-2 {
+						transition: all .3s ease-in-out;
+					}
+
+
+					&-0,
+					&-2 {
+						top: 11px;
+						@include respond-to(small-all) {
+							top: 6px;
+						}
+					}
+
+
+					&-0 {
+						transform: rotate(-45deg);
+					}
+					&-1 {
+						opacity: 0;
+					}
+					&-2 {
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+
+
+		&-line {
+			position: absolute;
+			top: 0;
+			@include mixinDimensions(36px, 2px);
+			background-color: $c-eclipse;
+			transition: all .3s ease-in-out;
+			@include respond-to(small-all) {
+				width: 19px;
+				height: 1px;
+			}
+
+
+			&-1 {
+				top: 11px;
+				@include respond-to(small-all) {
+					top: 6px;
+				}
+			}
+
+
+			&-2 {
+				top: 22px;
+				@include respond-to(small-all) {
+					top: 12px;
+				}
+			}
+		}
+	}
+}
