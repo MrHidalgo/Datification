@@ -22,6 +22,22 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 .advertising {
 
 
+	.blocks__internal &{
+		.advertising__top {
+			@include respond-to(medium) {
+				float: right;
+				width: 300px;
+			}
+		}
+		.advertising__bottom {
+			@include respond-to(medium) {
+				float: left;
+				width: 50%;
+			}
+		}
+	}
+
+
 	&__top {
 		max-width: 300px;
 		height: 250px;
@@ -99,25 +115,24 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		}
 
 
+		&:hover,
+		&:active {
+			border-color: $c-eclipse;
+			color: $c-eclipse;
+			transition: all .3s ease-in-out;
+		}
+
 
 		&:hover {
 			background-color: $c-shakespeare;
 		}
 
 
-		&:focus {
+		&:active {
 			background-color: $c-cerulean;
 			@include respond-to(medium-all) {
 				background-color: $c-shakespeare;
 			}
-		}
-
-
-		&:hover,
-		&:focus {
-			border-color: $c-eclipse;
-			color: $c-eclipse;
-			transition: all .3s ease-in-out;
 		}
 
 

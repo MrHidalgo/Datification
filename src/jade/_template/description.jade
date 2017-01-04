@@ -1,0 +1,66 @@
+-
+    var descArr = [
+        "Компания <a href='javascript:void(0);' class='description__text-link' title=''>Philips</a> создала зубные щетки, которые собирают информацию о чистке зубов.",
+        "Разработчики озадачились вопросом, как заставить детей тщательно чистить зубы, и решили создать приложение, которое превращает утренние процедуры в игру.",
+        "Их “умная” щетка научилась считывать информацию о том, как именно и где были вычищены зубы, и передавать ее на планшет. Так у них вышла игра вроде тамагочи. В зависимости от качества чистки, можно набрать то или иное количество баллов, перейти на новый уровень, купить девайсы для своего героя.",
+        "Однако полученная информация оказалась весьма полезной. Вскоре появилась такая же щетка для взрослых - Philips Sonicare FlexCare Platinum Connected. Она уже не была джойстиком для управления игрой, но продолжала собирать информацию о качестве чистки зубов, проблемных участках, а также присылала оповещение в случае износа щетки.",
+        "Собранные данные можно передать дантисту и он будет знать, какой из зубов надо проверить тщательнее."
+    ];
+
+
+mixin descTextBlock(titleName, textArr)
+    p.description__title-block!= titleName
+
+    -for(var i = 0; i < textArr.length; i++)
+        p.description__text!= textArr[i]
+
+
+
+.description
+    .description__header
+        .description__img-wrap
+            img(src="./img/img-description.png", alt="", title="", class="description__img")
+
+
+        .description__info.clearfix
+            hr.description__info-line
+            p.description__info-author!= "<span class='description__info-author_gray'>Автор:</span>Плешаков Дмитрий"
+            p.description__info-data!= "4. 12. 2016"
+            p.description__info-see!= "2648"
+
+
+        h1.description__title!= "Зубная щетка, стиральная машинка, термостат и счетчик: что они о нас знают?"
+
+        h2.description__sub-title!= "Мы выяснили, какую информацию о нас могут узнать бытовые приборы и как это изменит жизнь."
+
+        .description__paragraph
+            +descTextBlock("Зубная щетка", descArr)
+
+        .description__img-wrap
+            img(src="./img/img-description.png", alt="", title="", class="description__img")
+
+        .description__paragraph
+            +descTextBlock("Стиральная машина", descArr)
+
+        .description__img-wrap
+            img(src="./img/img-description.png", alt="", title="", class="description__img")
+
+        .description__paragraph
+            +descTextBlock("Домашний термостат", descArr)
+
+        .description__img-wrap
+            img(src="./img/img-description.png", alt="", title="", class="description__img")
+
+        .description__paragraph
+            +descTextBlock("Счетчики", descArr)
+
+
+
+    .description__footer.clearfix
+        a(href="javascript:void(0);", title="", class="description__footer-left description__footer-fb")
+        a(href="javascript:void(0);", title="", class="description__footer-center description__footer-share")!= "Поделиться"
+        a(href="javascript:void(0);", title="", class="description__footer-right description__footer-count")!= "123"
+
+
+
+

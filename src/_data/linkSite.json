@@ -9,5 +9,15 @@
     "./script/jquery-1.11.1.min.js",
     "./script/owl.carousel.min.js",
     "./script/main.min.js"
+  ],
+
+  "styleLinkInternal" : [
+    "./css/internal.min.css",
+    "./css/fonts.min.css"
+  ],
+
+  "scriptLinkInternal" : [
+    "./script/jquery-1.11.1.min.js",
+    "./script/main.min.js"
   ]
 }

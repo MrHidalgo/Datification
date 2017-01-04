@@ -78,21 +78,23 @@ $(document).ready(function() {
 
 
     /* EVENTS */
-    $('.events__carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        dots: false,
-        nav:true,
-        responsive:{
-            0:{
-                items: 1
-            },
-            768:{
-                items: 2
-            },
-            992:{
-                items: 3
+    if($('.events__carousel').length > 0) {
+        $('.events__carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            dots: false,
+            nav:true,
+            responsive:{
+                0:{
+                    items: 1
+                },
+                768:{
+                    items: 2
+                },
+                992:{
+                    items: 3
+                }
             }
-        }
-    })
+        })
+    }
 });

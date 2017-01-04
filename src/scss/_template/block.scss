@@ -16,6 +16,24 @@ $c-white            : return-value(color, white);
 	position: relative;
 
 
+	&.blocks__internal {
+		.blocks__left {
+			padding-right: 53px;
+			@include respond-to(medium-all) {
+				padding-right: 0;
+			}
+		}
+
+
+		.blocks__left,
+		.blocks__right {
+			@include respond-to(medium-all) {
+				width: 100%;
+			}
+		}
+	}
+
+
 	&__left {
 		width: calc(100% - 300px);
 		padding-right: 40px;
