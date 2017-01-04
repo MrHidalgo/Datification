@@ -1,0 +1,179 @@
+///
+/// IMPORT BLOCK
+///
+@import "../_mixin/mixin";
+@import "../_function/function";
+
+@import "../_variable/sprite_dat";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-black            : return-value(color, black);
+$c-cerulean         : return-value(color, cerulean);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-dim_gray         : return-value(color, dim_gray);
+$c-nobel            : return-value(color, nobel);
+
+$f-PN_black         : return-value(fonts, PN_black);
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.events {
+	min-height: 365px;
+	background-color: $c-white;
+	border-top: 2px solid $c-shakespeare;
+	border-bottom: 2px solid $c-shakespeare;
+	margin-top: 60px;
+
+
+	&__title {
+		font: {
+			size: 35px;
+			family: $f-PN_black;
+		}
+		color: $c-shakespeare;
+		text-transform: uppercase;
+		position: absolute;
+		left: 0;
+		top: -30px;
+		line-height: 1;
+	}
+
+
+	&__info {
+		color: $c-dim_gray;
+		position: absolute;
+		right: 100px;
+		top: -25px;
+		@include respond-to(small-all) {
+			display: none;
+		}
+	}
+
+
+	&__row {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+
+	&__item {
+		width: 300px;
+		border-top: 8px solid $c-shakespeare;
+		@include respond-to(small-all) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+
+	&__img {
+		display: block;
+		margin: 10px auto 20px;
+	}
+
+
+	&__desc {
+		font: {
+			size: 18px;
+			family: $f-PN_bold;
+		}
+		margin-bottom: 20px;
+	}
+
+
+	&__line {
+		height: 2px;
+		background-color: $c-black;
+		border: none;
+	}
+
+
+	&__item-info {
+		font-family: $f-PN_bold;
+		color: $c-dim_gray;
+	}
+}
+
+
+.owl {
+	&-nav{
+		position: absolute;
+		right: 15px;
+		top: -42px;
+		@include respond-to(small-all) {
+			top: -71px;
+			right: 0;
+		}
+	}
+	&-prev {
+		margin-right: 1px;
+		@include respond-to(small-all) {
+			margin-right: 2px;
+		}
+		&:before {
+			@include retina-sprite($sp-i-arrow-prev-group);
+			@include respond-to(small-all) {
+				@include retina-sprite($sp-i-arrow-prev-mobile-group);
+			}
+		}
+		&:hover,
+		&:focus {
+			&:before {
+				@include retina-sprite($sp-i-arrow-prev-h-group);
+				@include respond-to(small-all) {
+					@include retina-sprite($sp-i-arrow-prev-mobile-h-group);
+				}
+			}
+		}
+	}
+	&-next {
+		&:before {
+			@include retina-sprite($sp-i-arrow-next-group);
+			@include respond-to(small-all) {
+				@include retina-sprite($sp-i-arrow-next-mobile-group);
+			}
+		}
+		&:hover,
+		&:focus {
+			&:before {
+				@include retina-sprite($sp-i-arrow-next-h-group);
+				@include respond-to(small-all) {
+					@include retina-sprite($sp-i-arrow-next-mobile-h-group);
+				}
+			}
+		}
+	}
+	&-prev,
+	&-next {
+		position: relative;
+		display: inline-block;
+		font-size: 0;
+		@include mixinDimensions(28px);
+		background-color: $c-shakespeare;
+		border: 2px solid $c-shakespeare;
+		@include respond-to(small-all) {
+			@include mixinDimensions(57px);
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		&:hover,
+		&:active {
+			border: 2px solid $c-dim_gray;
+		}
+		&:active {
+			background-color: $c-cerulean;
+		}
+	}
+}

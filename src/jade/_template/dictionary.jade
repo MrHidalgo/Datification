@@ -48,5 +48,9 @@
             .dictionary__right
                 ul.dictionary__item-link
                     - for(var j = 0; j < dictionaryLink.length; j++)
-                        li.dictionary__list-link
-                            a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryLink[j]
+                        if(j < 4)
+                            li.dictionary__list-link
+                                a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryLink[j]
+                        else
+                            li.dictionary__list-link.hide
+                                a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryLink[j]

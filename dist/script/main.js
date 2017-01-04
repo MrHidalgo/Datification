@@ -75,4 +75,24 @@ $(document).ready(function() {
         $(".dictionary__list").removeClass("active");
         $(this).closest(".dictionary__list").addClass("active");
     });
+
+
+    /* EVENTS */
+    $('.events__carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        dots: false,
+        nav:true,
+        responsive:{
+            0:{
+                items: 1
+            },
+            768:{
+                items: 2
+            },
+            992:{
+                items: 3
+            }
+        }
+    });
 });

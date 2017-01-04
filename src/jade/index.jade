@@ -11,11 +11,11 @@ html(lang="en")
     body
 
         //- BLOCK HEADER [nav, bottomInfo, logo, slogan]
-        //block header
+        block header
             include ./_template/header
 
 
-        //.blocks
+        .blocks
             a(href="javascript:void(0);", class="btn__fb")
 
             .container.clearfix
@@ -27,11 +27,11 @@ html(lang="en")
                     include ./_template/advertising
 
 
-        //block text
+        block text
             include ./_template/text
 
 
-        //.container
+        .container
             +blockNewsLoop(6, 4, "block_hide")
 
 
@@ -39,7 +39,7 @@ html(lang="en")
             include ./_template/dictionary
 
 
-        //.container
+        .container
             +blockNewsLoop(3, 2, "block_hide")
 
 

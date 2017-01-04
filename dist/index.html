@@ -7,37 +7,204 @@
     <title>Datification</title>
     <!--link(rel="icon" type="image/png" href="./img/favicon.png")-->
     <link href="./css/common.min.css" rel="stylesheet"/>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
     <link href="./css/fonts.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <!--block header
-    include ./_template/header
-    
-    
-    -->
-    <!--.blocks
-    a(href="javascript:void(0);", class="btn__fb")
-    
-    .container.clearfix
-        .blocks__left
-    
-            +blockNewsLoop(4, 2, "block_hide")
-    
-        .blocks__right
-            include ./_template/advertising
-    
-    
-    -->
-    <!--block text
-    include ./_template/text
-    
-    
-    -->
-    <!--.container
-    +blockNewsLoop(6, 4, "block_hide")
-    
-    
-    -->
+    <header class="header">
+      <div class="container">
+        <div class="header__row clearfix">
+          <div class="logotype"><img src="./img/img-logotype.png" class="logotype__img"><img src="./img/img-logotype-mobile.png" class="logotype__img-mobile"></div>
+          <nav class="nav clearfix">
+            <ul class="nav__list clearfix">
+              <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Статьи</a></li>
+              <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Словарь</a></li>
+              <li class="nav__item"><a href="javascript:void(0);" class="nav__link">Партнеры</a></li>
+            </ul><a href="javascript:void(0);" class="nav__link-mobile"><span class="nav__link-line nav__link-line-0"></span><span class="nav__link-line nav__link-line-1"></span><span class="nav__link-line nav__link-line-2"></span></a>
+          </nav>
+          <div class="search clearfix"><a href="javascript:void(0);" class="search__btn"><i class="search__btn-icon"></i></a>
+            <form action="" class="search__form">
+              <input type="text" name="search" placeholder="Поиск" class="search__input">
+            </form>
+          </div>
+          <div class="lang"><a href="javascript:void(0);" class="lang__btn">ru<i class="icon lang__btn-icon"></i><span class="lang__btn-icon_hover"></span></a>
+            <div class="lang__drop">
+              <ul class="lang__list">
+                <li class="lang__item"><a href="javascript:void(0);" class="lang__drop-btn">ua</a></li>
+                <li class="lang__item"><a href="javascript:void(0);" class="lang__drop-btn">eng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="blocks"><a href="javascript:void(0);" class="btn__fb"></a>
+      <div class="container clearfix">
+        <div class="blocks__left">
+          <div class="blocks__row">
+            <div class="block clearfix ">
+              <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+              <div class="block__text-wrap">
+                <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+                <hr class="block__line"/>
+                <div class="block__info clearfix">
+                  <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+                  <p class="block__info-see"><i class="icon"></i>2648</p>
+                </div>
+              </div>
+            </div>
+            <div class="block clearfix ">
+              <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+              <div class="block__text-wrap">
+                <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua. Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+                <hr class="block__line"/>
+                <div class="block__info clearfix">
+                  <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+                  <p class="block__info-see"><i class="icon"></i>2648</p>
+                </div>
+              </div>
+            </div>
+            <div class="block clearfix block_hide">
+              <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+              <div class="block__text-wrap">
+                <p class="block__title">Что гложет украинский e-commerce?</p>
+                <hr class="block__line"/>
+                <div class="block__info clearfix">
+                  <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+                  <p class="block__info-see"><i class="icon"></i>2648</p>
+                </div>
+              </div>
+            </div>
+            <div class="block clearfix block_hide">
+              <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+              <div class="block__text-wrap">
+                <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka</p>
+                <hr class="block__line"/>
+                <div class="block__info clearfix">
+                  <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+                  <p class="block__info-see"><i class="icon"></i>2648</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blocks__right">
+          <div class="advertising">
+            <div class="advertising__top"></div>
+            <div class="advertising__bottom">
+              <p class="advertising__title">Горячие вакансии</p>
+              <div class="advertising__wrap">
+                <ul class="advertising__list">
+                  <li class="advertising__item clearfix">
+                    <div class="advertising__img-wrap"><img src="./img/img-advertising.png" alt="" title="" class="advertising__img"></div>
+                    <div class="advertising__text-wrap">
+                      <p class="advertising__text">Название вакансии которое может занимать несколько строчек</p>
+                    </div>
+                  </li>
+                  <li class="advertising__item clearfix">
+                    <div class="advertising__img-wrap"><img src="./img/img-advertising.png" alt="" title="" class="advertising__img"></div>
+                    <div class="advertising__text-wrap">
+                      <p class="advertising__text">Название вакансии которое может занимать несколько строчек Название вакансии которое может занимать несколько строчек Название вакансии которое может занимать несколько строчек</p>
+                    </div>
+                  </li>
+                  <li class="advertising__item clearfix">
+                    <div class="advertising__img-wrap"><img src="./img/img-advertising.png" alt="" title="" class="advertising__img"></div>
+                    <div class="advertising__text-wrap">
+                      <p class="advertising__text">Название вакансии которое может</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="advertising__btn-wrap"><a href="javascript:void(0);" class="advertising__btn">Все вакансии</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <div class="container">
+        <div class="text__row">
+          <p class="text__title">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+          <p class="text__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <hr class="text__line">
+          <div class="block__info clearfix">
+            <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+            <p class="block__info-see"><i class="icon"></i>2648</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="blocks__row">
+        <div class="block clearfix ">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix ">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua. Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix ">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix ">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua. Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix block_hide">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce?</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix block_hide">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="dictionary">
       <div class="container dictionary__container">
         <div class="dictionary__top">
@@ -91,21 +258,128 @@
               <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Третий толчок</a></li>
               <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Толчище</a></li>
               <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Толчок в квадрате</a></li>
-              <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Еще один толчок</a></li>
-              <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Третий толчок</a></li>
-              <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Толчище</a></li>
-              <li class="dictionary__list-link"><a href="javascript:void(0);" class="dictionary__btn-link">Толчок в квадрате</a></li>
+              <li class="dictionary__list-link hide"><a href="javascript:void(0);" class="dictionary__btn-link">Еще один толчок</a></li>
+              <li class="dictionary__list-link hide"><a href="javascript:void(0);" class="dictionary__btn-link">Третий толчок</a></li>
+              <li class="dictionary__list-link hide"><a href="javascript:void(0);" class="dictionary__btn-link">Толчище</a></li>
+              <li class="dictionary__list-link hide"><a href="javascript:void(0);" class="dictionary__btn-link">Толчок в квадрате</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <!--.container
-    +blockNewsLoop(3, 2, "block_hide")
-    
-    
-    -->
+    <div class="container">
+      <div class="blocks__row">
+        <div class="block clearfix ">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix ">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua. Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+        <div class="block clearfix block_hide">
+          <div class="block__img-wrap"><img src="./img/img-block-0.png" alt="" title="" class="block__img"/></div>
+          <div class="block__text-wrap">
+            <p class="block__title">Что гложет украинский e-commerce?</p>
+            <hr class="block__line"/>
+            <div class="block__info clearfix">
+              <p class="block__info-data"><i class="icon"></i>4.12.2016</p>
+              <p class="block__info-see"><i class="icon"></i>2648</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="events">
+      <div class="container">
+        <p class="events__title">Events</p>
+        <p class="events__info"><span class='events__info_start'>12. 12. 2016</span> - <span class='events__info_end'>12. 05. 2017</span></p>
+        <div class="events__row events__carousel owl-carousel">
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+          <div class="events__item"><img src="./img/img-events.png" alt="" title="" class="events__img">
+            <p class="events__desc">Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину.</p>
+            <hr class="events__line">
+            <p class="events__item-info"><span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container footer__container clearfix"><img src="./img/img-logotype-footer.png" alt="" title="" class="footer__logo footer__img">
+        <div class="footer__menu">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="javascript:void(0);" alt="" title="" class="footer__item-btn">Главная</a></li>
+            <li class="footer__item"><a href="javascript:void(0);" alt="" title="" class="footer__item-btn">Статьи</a></li>
+            <li class="footer__item"><a href="javascript:void(0);" alt="" title="" class="footer__item-btn">Словарь</a></li>
+            <li class="footer__item"><a href="javascript:void(0);" alt="" title="" class="footer__item-btn">Партнеры</a></li>
+          </ul>
+        </div>
+        <div class="footer__copyright"><i class="footer__icon"></i>
+          <p class="footer__copyright-text">Copyright © 2016</p>
+        </div>
+        <div class="footer__btn clearfix"><a href="javascript:void(0);" alt="" title="" class="footer__btn-subscribe">Подписаться</a><a href="javascript:void(0);" alt="" title="" class="footer__btn-fb"></a></div>
+      </div>
+    </footer>
     <script src="./script/jquery-1.11.1.min.js"></script>
+    <script src="./script/owl.carousel.min.js"></script>
     <script src="./script/main.min.js"></script>
   </body>
 </html>

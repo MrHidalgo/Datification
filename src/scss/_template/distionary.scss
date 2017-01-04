@@ -27,6 +27,10 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	border-top: 2px solid $c-cerulean;
 	border-bottom: 2px solid $c-cerulean;
 	margin-top: 100px;
+	margin-bottom: 40px;
+	@include respond-to(small-all) {
+		margin-top: 60px;
+	}
 
 
 	&__container {
@@ -53,8 +57,19 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	&__latter {
 		position: absolute;
 		top: -27px;
-		right: 0;
+		right: 15px;
 		height: 27px;
+		@include respond-to(large) {
+			width: 700px;
+		}
+		@include respond-to(medium) {
+			width: 500px;
+			top: -(27 * 2) * 1px;
+			height: (27 * 2) * 1px;
+		}
+		@include respond-to(small-all) {
+			display: none;
+		}
 	}
 
 
@@ -69,6 +84,10 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 				border-top: 2px solid $c-cerulean;
 				border-right: 2px solid $c-cerulean;
 				color: $c-cerulean;
+				transition: all .3s ease-in-out;
+				@include respond-to(medium) {
+					border-bottom: 2px solid $c-cerulean;
+				}
 			}
 		}
 	}
@@ -80,9 +99,16 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		border-left: 2px solid transparent;
 		border-top: 2px solid transparent;
 		border-right: 2px solid transparent;
-		transition: all .3s ease-in-out;
 		color: $c-dim_gray;
 		@include mixinDimensions(27px);
+		line-height: 25px;
+		@include respond-to(large) {
+			width: (700 / 33) * 1px;
+		}
+		@include respond-to(medium) {
+			width: ((500 / 33) * 1px) * 1.9;
+			border-bottom: 2px solid transparent;
+		}
 	}
 
 
@@ -94,11 +120,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	}
 
 
-	&__left {
-		border-right: 1px solid $c-nobel;
-	}
-
-
 	&__left,
 	&__right {
 		width: 50%;
@@ -106,10 +127,43 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	}
 
 
+	&__left {
+		border-right: 1px solid $c-nobel;
+		@include respond-to(medium) {
+			width: 65%;
+		}
+		@include respond-to(small-all) {
+			width: 100%;
+			border-right: none;
+			padding-right: 0;
+		}
+	}
+
+
+	&__right {
+		@include respond-to(medium) {
+			width: 35%;
+		}
+		@include respond-to(small-all) {
+			display: none;
+		}
+	}
+
+
 	&__list-link {
 		width: 50%;
 		display: inline-block;
 		margin-right: -.32em;
+		@include respond-to(medium) {
+			width: 100%;
+		}
+
+
+		&.hide {
+			@include respond-to(medium) {
+				display: none;
+			}
+		}
 	}
 
 
@@ -127,6 +181,9 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 			family: $f-PN_bold;
 		}
 		margin-bottom: 40px;
+		@include respond-to(small-all) {
+			font-size: 20px;
+		}
 
 
 		&_first {
@@ -150,6 +207,9 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	&__sub-desc {
 		font: {
 			size: 18px;
+		}
+		@include respond-to(small-all) {
+			font-size: 16px;
 		}
 
 

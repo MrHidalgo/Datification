@@ -45,7 +45,13 @@ mixin blockNewsLoop(countNum, addClassCount, className)
     .blocks__row
         -for(var i = 0; i < countNum; i++)
             if(i < addClassCount)
-                +newsBLock("", "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.")
+                if(i % 2 === 0)
+                    +newsBLock("", "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.")
+                else
+                    +newsBLock("", "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua. Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.")
             else
-                +newsBLock(className, "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka.ua.")
+                if(i === addClassCount)
+                    +newsBLock(className, "Что гложет украинский e-commerce?")
+                else
+                    +newsBLock(className, "Что гложет украинский e-commerce? Владислав Чечеткин, основатель и совладелец Rozetka")
 

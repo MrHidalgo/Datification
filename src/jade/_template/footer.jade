@@ -1,0 +1,27 @@
+-
+    var footerMenu = [
+        "Главная",
+        "Статьи",
+        "Словарь",
+        "Партнеры"
+    ];
+
+
+footer.footer
+    .container.footer__container.clearfix
+
+        img(src="./img/img-logotype-footer.png", alt="", title="", class="footer__logo footer__img")
+
+        .footer__menu
+            ul.footer__list
+                -for(var i = 0; i < footerMenu.length; i++)
+                    li.footer__item
+                        a(href="javascript:void(0);", alt="", title="", class="footer__item-btn")!= footerMenu[i]
+
+        .footer__copyright
+            i.footer__icon
+            p.footer__copyright-text!= 'Copyright © 2016'
+
+        .footer__btn.clearfix
+            a(href="javascript:void(0);", alt="", title="", class="footer__btn-subscribe")!= "Подписаться"
+            a(href="javascript:void(0);", alt="", title="", class="footer__btn-fb")

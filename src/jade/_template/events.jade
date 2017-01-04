@@ -1,0 +1,14 @@
+
+.events
+    .container
+        p.events__title!= "Events"
+
+        p.events__info!= "<span class='events__info_start'>12. 12. 2016</span> - <span class='events__info_end'>12. 05. 2017</span>"
+
+        .events__row.events__carousel.owl-carousel
+            - for(var i = 0; i < 10; i++)
+                .events__item
+                    img(src="./img/img-events.png", alt="", title="", class="events__img")
+                    p.events__desc!= "Толчок предпринимательству развивающихся рынков: Seedstars World едут в Украину."
+                    hr.events__line
+                    p.events__item-info!= "<span class='events__item-info_start'>12. 12. 2016</span> - <span class='events__item-info_end'>12. 05. 2017</span>"

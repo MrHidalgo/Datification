@@ -8,6 +8,10 @@ app.set('port',	(process.env.PORT	||	3333));
 app.use('/',	        express.static('./dist/', {
         'index' : 'index.html'
 }));
+// SECOND PAGE
+app.use('/internal',	        express.static('./dist/', {
+        'index' : 'internal.html'
+}));
 
 
 app.listen(app.get('port'),	function()	{
