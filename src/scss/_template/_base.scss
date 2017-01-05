@@ -7,18 +7,24 @@
 ///
 $c-eclipse          : return-value(color, eclipse);
 $c-nobel            : return-value(color, nobel);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-cerulean         : return-value(color, cerulean);
 
 $f-PN_bold          : return-value(fonts, PN_bold);
 ///
 /// MAIN
 ///
 .block {
+	cursor: pointer;
 	max-width: 300px;
 	margin-bottom: 40px;
+	margin-right: 90px;
 	@include respond-to(large) {
 		width: 270px;
+		margin-right: 30px;
 	}
 	@include respond-to(medium-all) {
+		margin-right: 0;
 		&_hide {
 			display: none;
 		}
@@ -28,14 +34,49 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	}
 
 
+	.blocks & {
+		margin-right: 115px;
+		@include respond-to(large) {
+			margin-right: 35px;
+		}
+	}
+
+
+	&:active,
+	&:hover {
+		.block__title {
+			transition: all .3s ease-in-out;
+		}
+	}
+
+
+	&:hover {
+		.block__title {
+		  color: $c-shakespeare;
+		}
+	}
+
+
+	&:active {
+		.block__title {
+		  color: $c-cerulean;
+		}
+	}
+
+
 	&__img {
-		max-height: 100%;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 
 
 		&-wrap {
 			@include mixinDimensions(300px, 250px);
 			overflow: hidden;
 			margin-bottom: 20px;
+			position: relative;
 			@include respond-to(large) {
 				width: 270px;
 			}
@@ -136,9 +177,10 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 @media screen and (min-width: 1320px) {
 	.btn__fb {
-		position: absolute;
+		position: fixed;
+		z-index: 100;
 		right: 0;
-		top: 0;
+		top: 190px;
 		@include mixinDimensions(70px, 56px);
 		background-color: #3b5998;
 

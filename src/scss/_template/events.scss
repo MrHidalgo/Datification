@@ -41,6 +41,13 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		left: 0;
 		top: -30px;
 		line-height: 1;
+
+
+		&:hover {
+			cursor: pointer;
+			color: $c-cerulean;
+			transition: all .3s ease-in-out;
+		}
 	}
 
 

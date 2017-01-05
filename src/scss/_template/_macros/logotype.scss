@@ -15,18 +15,22 @@ $c-white            : return-value(color, white);
 .logotype {
 
 
+	&__img-mobile {
+		width: 221px;
+		display: none;
+	}
+
+
 	&__img {
 		@include respond-to(small-all) {
 			display: none;
 		}
-	}
 
 
-	&__img-mobile {
-		width: 221px;
-		display: none;
-		@include respond-to(small-all) {
-			display: block;
+		&_normal {
+			@include respond-to(small-all) {
+				display: block;
+			}
 		}
 	}
 }

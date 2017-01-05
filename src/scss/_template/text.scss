@@ -9,6 +9,7 @@
 $w-all              : return-value(dimension, all);
 
 $c-white            : return-value(color, white);
+$c-cerulean         : return-value(color, cerulean);
 $c-shakespeare      : return-value(color, shakespeare);
 
 $f-PN_bold          : return-value(fonts, PN_bold);
@@ -68,6 +69,13 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		@include respond-to(small-all) {
 			font-size: 20px;
 			margin-bottom: 30px;
+		}
+
+
+		&:hover {
+			cursor: pointer;
+			color: $c-cerulean;
+			transition: all .3s ease-in-out;
 		}
 	}
 

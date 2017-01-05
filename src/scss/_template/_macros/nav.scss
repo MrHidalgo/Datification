@@ -29,22 +29,30 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	}
 
 
-	&.active {
-		.nav__list {
-			display: block;
-			position: absolute;
-			background-color: $c-white_smoke;
-			z-index: 11;
-			top: 56px;
-			width: calc(100% - 32px);
-			height: auto;
-			left: 15px;
-			padding-top: 50px;
-			padding-left: 50px;
-			padding-right: 50px;
-			border-left: 2px solid $c-eclipse;
-			border-bottom: 2px solid $c-eclipse;
-			border-right: 2px solid $c-eclipse;
+	&__list {
+		height: 52px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+
+		&_small {
+			@include respond-to(medium-all) {
+				display: none;
+				position: absolute;
+				background-color: $c-white_smoke;
+				z-index: 11;
+				top: 56px;
+				width: calc(100% - 32px);
+				height: auto;
+				left: 15px;
+				padding-top: 50px;
+				padding-left: 50px;
+				padding-right: 50px;
+				border-left: 2px solid $c-eclipse;
+				border-bottom: 2px solid $c-eclipse;
+				border-right: 2px solid $c-eclipse;
+			}
 			@include respond-to(small-all) {
 				top: 29px;
 				left: 0;
@@ -55,27 +63,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 				border-width: 1px;
 				background-color: $c-white;
 			}
-		}
-
-
-		.nav__link {
-			width: 50%;
-			margin-bottom: 50px;
-			float: left;
-			@include respond-to(small-all) {
-				margin-bottom: 30px;
-			}
-		}
-	}
-
-
-	&__list {
-		height: 52px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		@include respond-to(medium-all) {
-			display: none;
 		}
 	}
 
@@ -97,6 +84,14 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		}
 		@include respond-to(large) {
 			font-size: 14px;
+		}
+		@include respond-to(medium-all) {
+			width: 50%;
+			margin-bottom: 50px;
+			float: left;
+		}
+		@include respond-to(small-all) {
+			margin-bottom: 30px;
 		}
 
 

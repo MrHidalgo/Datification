@@ -63,7 +63,7 @@ $c-white            : return-value(color, white);
 		display: flex;
 		flex-flow: wrap row;
 		align-items: flex-start;
-		justify-content: space-around;
+		justify-content: flex-start;
 	}
 }
 

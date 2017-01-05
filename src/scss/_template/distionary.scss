@@ -12,6 +12,7 @@ $w-all              : return-value(dimension, all);
 
 $c-white            : return-value(color, white);
 $c-cerulean         : return-value(color, cerulean);
+$c-shakespeare      : return-value(color, shakespeare);
 $c-dim_gray         : return-value(color, dim_gray);
 $c-nobel            : return-value(color, nobel);
 
@@ -51,6 +52,13 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		left: 0;
 		top: -30px;
 		line-height: 1;
+
+
+		&:hover {
+			cursor: pointer;
+			color: $c-shakespeare;
+			transition: all .3s ease-in-out;
+		}
 	}
 
 
@@ -108,6 +116,12 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		@include respond-to(medium) {
 			width: ((500 / 33) * 1px) * 1.9;
 			border-bottom: 2px solid transparent;
+		}
+
+
+		&:hover {
+			color: $c-shakespeare;
+			transition: all .3s ease-in-out;
 		}
 	}
 
