@@ -7,12 +7,27 @@
 
 
 .logotype__img-mobile {
+  width: 221px;
   display: none;
 }
 
 @media screen and (max-width: 767px) {
   
   .logotype__img-mobile {
+    display: block;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .logotype__img_normal {
+    display: none;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px) {
+  
+  .logotype__img_retina {
     display: block;
   }
 }
@@ -289,7 +304,7 @@
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -391px;
+  background-position: 0px -431px;
   width: 22px;
   height: 20px;
 }
@@ -298,7 +313,7 @@
   
   .search__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -308,7 +323,7 @@
     position: relative;
     top: 1px;
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -375px;
+    background-position: 0px -415px;
     width: 12px;
     height: 11px;
   }
@@ -318,7 +333,7 @@
   
   .search__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -438,7 +453,7 @@ input[name="search"]::placeholder {
   
   .lang.active .lang__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -508,7 +523,7 @@ input[name="search"]::placeholder {
   
   .lang__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -537,7 +552,7 @@ input[name="search"]::placeholder {
   
   .lang__btn-icon_hover {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1228,7 +1243,7 @@ input[name="search"]::placeholder {
   
   .dictionary__sub-title_first:after {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1266,7 +1281,7 @@ input[name="search"]::placeholder {
   
   .dictionary__sub-desc_first:after {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1362,19 +1377,25 @@ input[name="search"]::placeholder {
 .owl-nav {
   position: absolute;
   right: 15px;
-  top: -42px;
+  top: -28px;
+  line-height: 0;
+  width: 57px;
+  height: 28px;
 }
 
 @media screen and (max-width: 767px) {
   
   .owl-nav {
-    top: -71px;
+    top: -57px;
     right: 0;
+    width: 116px;
+    height: 57px;
   }
 }
 
 
 .owl-prev {
+  left: 0;
   margin-right: 1px;
 }
 
@@ -1397,7 +1418,7 @@ input[name="search"]::placeholder {
   
   .owl-prev:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1415,12 +1436,12 @@ input[name="search"]::placeholder {
   
   .owl-prev:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
 
-.owl-prev:hover:before, .owl-prev:focus:before {
+.owl-prev:hover:before, .owl-prev:active:before {
   background-image: url(../img/sprite_dat.png);
   background-position: 0px -114px;
   width: 7px;
@@ -1429,15 +1450,15 @@ input[name="search"]::placeholder {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   
-  .owl-prev:hover:before, .owl-prev:focus:before {
+  .owl-prev:hover:before, .owl-prev:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
 @media screen and (max-width: 767px) {
   
-  .owl-prev:hover:before, .owl-prev:focus:before {
+  .owl-prev:hover:before, .owl-prev:active:before {
     background-image: url(../img/sprite_dat.png);
     background-position: 0px -135px;
     width: 12px;
@@ -1447,10 +1468,15 @@ input[name="search"]::placeholder {
 
 @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi) {
   
-  .owl-prev:hover:before, .owl-prev:focus:before {
+  .owl-prev:hover:before, .owl-prev:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
+}
+
+
+.owl-next {
+  right: 0;
 }
 
 
@@ -1465,7 +1491,7 @@ input[name="search"]::placeholder {
   
   .owl-next:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1483,12 +1509,12 @@ input[name="search"]::placeholder {
   
   .owl-next:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
 
-.owl-next:hover:before, .owl-next:focus:before {
+.owl-next:hover:before, .owl-next:active:before {
   background-image: url(../img/sprite_dat.png);
   background-position: 0px 0px;
   width: 7px;
@@ -1497,15 +1523,15 @@ input[name="search"]::placeholder {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   
-  .owl-next:hover:before, .owl-next:focus:before {
+  .owl-next:hover:before, .owl-next:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
 @media screen and (max-width: 767px) {
   
-  .owl-next:hover:before, .owl-next:focus:before {
+  .owl-next:hover:before, .owl-next:active:before {
     background-image: url(../img/sprite_dat.png);
     background-position: 0px -21px;
     width: 12px;
@@ -1515,16 +1541,16 @@ input[name="search"]::placeholder {
 
 @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi) {
   
-  .owl-next:hover:before, .owl-next:focus:before {
+  .owl-next:hover:before, .owl-next:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
 
 .owl-prev, .owl-next {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  top: 0;
   font-size: 0;
   width: 28px;
   height: 28px;
@@ -1699,10 +1725,18 @@ input[name="search"]::placeholder {
 
 
 .footer__icon {
+  background-image: url(../img/sprite_dat.png);
+  background-position: 0px -375px;
   width: 45px;
   height: 35px;
-  background-image: url("../img/img-logo-septa.png");
-  background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .footer__icon {
+    background-image: url(../img/sprite_dat@2x.png);
+    background-size: 45px 451px;
+  }
 }
 
 
@@ -1809,7 +1843,29 @@ input[name="search"]::placeholder {
   
   .footer__btn-fb:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
+  }
+}
+
+
+
+.footer__logo {
+  width: 74px;
+}
+
+
+.footer__img_retina {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .footer__img_normal {
+    display: none;
+  }
+  
+  .footer__img_retina {
+    display: block;
   }
 }
 
@@ -2003,7 +2059,7 @@ input[name="search"]::placeholder {
   
   .block__info-data .icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -2031,7 +2087,7 @@ input[name="search"]::placeholder {
   
   .block__info-see .icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -2081,7 +2137,7 @@ input[name="search"]::placeholder {
   
   .btn__fb:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 

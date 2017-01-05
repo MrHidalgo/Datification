@@ -81,13 +81,18 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 	&__img {
-		max-width: 100%;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 
 
 		&-wrap {
 			@include mixinDimensions($w-all, 340px);
 			margin-bottom: 20px;
 			overflow: hidden;
+			position: relative;
 		}
 	}
 

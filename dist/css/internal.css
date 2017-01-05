@@ -7,12 +7,27 @@
 
 
 .logotype__img-mobile {
+  width: 221px;
   display: none;
 }
 
 @media screen and (max-width: 767px) {
   
   .logotype__img-mobile {
+    display: block;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .logotype__img_normal {
+    display: none;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px) {
+  
+  .logotype__img_retina {
     display: block;
   }
 }
@@ -289,7 +304,7 @@
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -391px;
+  background-position: 0px -431px;
   width: 22px;
   height: 20px;
 }
@@ -298,7 +313,7 @@
   
   .search__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -308,7 +323,7 @@
     position: relative;
     top: 1px;
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -375px;
+    background-position: 0px -415px;
     width: 12px;
     height: 11px;
   }
@@ -318,7 +333,7 @@
   
   .search__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -438,7 +453,7 @@ input[name="search"]::placeholder {
   
   .lang.active .lang__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -508,7 +523,7 @@ input[name="search"]::placeholder {
   
   .lang__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -537,7 +552,7 @@ input[name="search"]::placeholder {
   
   .lang__btn-icon_hover {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -836,7 +851,7 @@ input[name="search"]::placeholder {
   
   .description__footer-left:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -871,7 +886,13 @@ input[name="search"]::placeholder {
 
 
 .description__img {
-  max-width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 
@@ -880,6 +901,7 @@ input[name="search"]::placeholder {
   height: 340px;
   margin-bottom: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 
@@ -959,7 +981,7 @@ input[name="search"]::placeholder {
   
   .description__info-data:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -975,7 +997,7 @@ input[name="search"]::placeholder {
   
   .description__info-see:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1265,10 +1287,18 @@ input[name="search"]::placeholder {
 
 
 .footer__icon {
+  background-image: url(../img/sprite_dat.png);
+  background-position: 0px -375px;
   width: 45px;
   height: 35px;
-  background-image: url("../img/img-logo-septa.png");
-  background-repeat: no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .footer__icon {
+    background-image: url(../img/sprite_dat@2x.png);
+    background-size: 45px 451px;
+  }
 }
 
 
@@ -1375,7 +1405,29 @@ input[name="search"]::placeholder {
   
   .footer__btn-fb:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
+  }
+}
+
+
+
+.footer__logo {
+  width: 74px;
+}
+
+
+.footer__img_retina {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .footer__img_normal {
+    display: none;
+  }
+  
+  .footer__img_retina {
+    display: block;
   }
 }
 
@@ -1569,7 +1621,7 @@ input[name="search"]::placeholder {
   
   .block__info-data .icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1597,7 +1649,7 @@ input[name="search"]::placeholder {
   
   .block__info-see .icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 
@@ -1647,7 +1699,7 @@ input[name="search"]::placeholder {
   
   .btn__fb:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 24px 411px;
+    background-size: 45px 451px;
   }
 }
 

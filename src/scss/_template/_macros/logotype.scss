@@ -23,9 +23,28 @@ $c-white            : return-value(color, white);
 
 
 	&__img-mobile {
+		width: 221px;
 		display: none;
 		@include respond-to(small-all) {
 			display: block;
+		}
+	}
+}
+
+
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+	.logotype {
+		&__img{
+			&_normal {
+				display: none;
+			}
+			&_retina {
+				@include respond-to(small-all) {
+					display: block;
+				}
+			}
 		}
 	}
 }

@@ -102,9 +102,7 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 	&__icon {
-		@include mixinDimensions(45px, 35px);
-		background-image: url("../img/img-logo-septa.png");
-		background-repeat: no-repeat;
+		@include retina-sprite($sp-i-logo-septa-group);
 	}
 
 
@@ -176,6 +174,34 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 				right: 0;
 				margin: auto;
 				@include retina-sprite($sp-i-fb-group);
+			}
+		}
+	}
+}
+
+
+/* logotype footer */
+.footer {
+	&__logo {
+		width: 74px;
+	}
+
+
+	&__img {
+		&_retina {
+			display: none;
+		}
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+	.footer {
+		&__img {
+			&_normal {
+				display: none;
+			}
+			&_retina {
+				display: block;
 			}
 		}
 	}
