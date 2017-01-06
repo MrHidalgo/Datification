@@ -10,16 +10,34 @@
     ];
 
     var dictionaryLink = [
-        "Еще один толчок",
-        "Третий толчок",
-        "Толчище",
-        "Толчок в квадрате",
-        "Еще один толчок",
-        "Третий толчок",
-        "Толчище",
-        "Толчок в квадрате"
+        "Еще один толчок", "Третий толчок", "Толчище", "Толчок в квадрате", "Еще один толчок", "Третий толчок", "Толчище", "Толчок в квадрате"
+    ];
+    var dictionaryLink0 = [
+        "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor"
+    ];
+    var dictionaryLink1 = [
+        "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum"
     ];
 
+    var dictionaryTitle = "<span class='dictionary__sub-title_first'>Толчок</span> предпринимательству развивающихся рынков: Seedstars World едут в Украину.";
+    var dictionarySubTitle = "<span class='dictionary__sub-desc_first'>Толчок</span> - туалет, помещение для справления естественных нужд человека";
+
+
+mixin dictionaryContent(titleName, subTitleName, dictionaryArr)
+    .dictionary__left
+        p.dictionary__sub-title!= titleName
+
+        p.dictionary__sub-desc!= subTitleName
+
+    .dictionary__right
+        ul.dictionary__item-link
+            - for(var j = 0; j < dictionaryArr.length; j++)
+                if(j < 4)
+                    li.dictionary__list-link
+                        a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryArr[j]
+                else
+                    li.dictionary__list-link.hide
+                        a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryArr[j]
 
 
 .dictionary
@@ -33,24 +51,16 @@
                     -for(var i = 0; i < dictionaryLatter.length; i++)
                         if(i === 19)
                             li.dictionary__list.clearfix.active
-                                a(href="javascript:void(0);", class="dictionary__btn")!= dictionaryLatter[i]
+                                a(href="javascript:void(0);", class="dictionary__btn", data-letter= i)!= dictionaryLatter[i]
                         else
                             li.dictionary__list.clearfix
-                                a(href="javascript:void(0);", class="dictionary__btn")!= dictionaryLatter[i]
+                                a(href="javascript:void(0);", class="dictionary__btn", data-letter= i)!= dictionaryLatter[i]
 
 
-        .dictionary__row
-            .dictionary__left
-                p.dictionary__sub-title!= "<span class='dictionary__sub-title_first'>Толчок</span> предпринимательству развивающихся рынков: Seedstars World едут в Украину."
+        div(class="dictionary__row dictionary__row-" + 18)
+            +dictionaryContent("", "", dictionaryLink0)
+        div(class="dictionary__row active dictionary__row-" + 19)
+            +dictionaryContent(dictionaryTitle, dictionarySubTitle, dictionaryLink)
+        div(class="dictionary__row dictionary__row-" + 20)
+            +dictionaryContent("", "", dictionaryLink1)
 
-                p.dictionary__sub-desc!= "<span class='dictionary__sub-desc_first'>Толчок</span> - туалет, помещение для справления естественных нужд человека"
-
-            .dictionary__right
-                ul.dictionary__item-link
-                    - for(var j = 0; j < dictionaryLink.length; j++)
-                        if(j < 4)
-                            li.dictionary__list-link
-                                a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryLink[j]
-                        else
-                            li.dictionary__list-link.hide
-                                a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryLink[j]

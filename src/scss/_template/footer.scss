@@ -152,12 +152,12 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 			&:active {
+				color: $c-night_rider;
 				background-color: $c-cerulean;
 			}
 
 
-			&:hover,
-			&:active {
+			&:hover {
 				color: $c-night_rider;
 				transition: all .3s ease-in-out;
 			}

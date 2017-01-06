@@ -67,6 +67,12 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 			cursor: pointer;
 			color: $c-cerulean;
 			transition: all .3s ease-in-out;
+
+
+			&:after {
+				background-color: $c-cerulean;
+				transition: all .3s ease-in-out;
+			}
 		}
 
 
@@ -126,12 +132,12 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		&:active {
 			border-color: $c-eclipse;
 			color: $c-eclipse;
-			transition: all .3s ease-in-out;
 		}
 
 
 		&:hover {
 			background-color: $c-shakespeare;
+			transition: all .3s ease-in-out;
 		}
 
 

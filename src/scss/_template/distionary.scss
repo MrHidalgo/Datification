@@ -92,7 +92,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 				border-top: 2px solid $c-cerulean;
 				border-right: 2px solid $c-cerulean;
 				color: $c-cerulean;
-				transition: all .3s ease-in-out;
 				@include respond-to(medium) {
 					border-bottom: 2px solid $c-cerulean;
 				}
@@ -127,10 +126,15 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 	&__row {
-		display: flex;
+		display: none;
 		flex-flow: wrap row;
 		justify-content: center;
 		align-items: center;
+
+
+		&.active {
+			display: flex;
+		}
 	}
 
 

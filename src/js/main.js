@@ -77,8 +77,13 @@ $(document).ready(function() {
     $(".dictionary__btn").on("click", function(e) {
         e.preventDefault();
 
+        var letterLinkAttr = $(this).attr("data-letter");
+
         $(".dictionary__list").removeClass("active");
         $(this).closest(".dictionary__list").addClass("active");
+
+        $(".dictionary__row").removeClass("active");
+        $(".dictionary__row-" + letterLinkAttr).addClass("active");
     });
 
 

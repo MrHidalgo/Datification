@@ -42,17 +42,10 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 	}
 
 
-	&:active,
-	&:hover {
-		.block__title {
-			transition: all .3s ease-in-out;
-		}
-	}
-
-
 	&:hover {
 		.block__title {
 		  color: $c-shakespeare;
+			transition: all .3s ease-in-out;
 		}
 	}
 
