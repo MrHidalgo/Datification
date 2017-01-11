@@ -53,8 +53,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		}
 		@include respond-to(small-all) {
 			width: 100%;
-			padding-left: 15px;
-			padding-right: 15px;
 		}
 	}
 

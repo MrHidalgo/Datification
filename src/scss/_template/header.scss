@@ -19,13 +19,30 @@ $c-eclipse          : return-value(color, eclipse);
 /// MAIN BLOCK
 ///
 .header {
+	position: relative;
 	height: 110px;
 	padding-top: (110 - 56) * 1px;
 	margin-bottom: 80px;
 	@include respond-to(small-all) {
 		height: 60px;
 		padding-top: (60 - 29) * 1px;
-		margin-bottom: 30px;
+		margin-bottom: 57px;
+	}
+
+
+	.fixed &{
+		@include respond-to(medium-min) {
+			position: fixed;
+			z-index: 100;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding-top: 27px;
+			padding-bottom: 27px;
+			background-color: $c-white_smoke;
+			margin-bottom: 0;
+			box-shadow: 0 -1px 8px 1px rgba(0,0,0,.3)
+		}
 	}
 
 
@@ -33,9 +50,60 @@ $c-eclipse          : return-value(color, eclipse);
 		height: 56px;
 		@include respond-to(small-all) {
 			height: 29px;
-			margin-left: auto;
-			margin-right: auto;
-			width: 320px;
+		}
+	}
+
+
+	&__left {
+		float: left;
+		width: 424px;
+		@include respond-to(small-all) {
+			width: 221px;
+		}
+	}
+
+
+	&__right {
+		float: left;
+		width: calc(100% - 424px);
+		@include respond-to(small-all) {
+			width: calc(100% - 221px);
+		}
+	}
+
+
+	&__btn {
+		float: left;
+		position: relative;
+		@include mixinDimensions(152px, 56px);
+		line-height: 56px;
+		background-color: $c-night_rider;
+		text-align: center;
+		padding-left: 25px;
+		color: $c-white;
+		text-transform: uppercase;
+		font: {
+			family: $f-PN_bold;
+		}
+		@include respond-to(medium-all) {
+			width: 60px;
+			font-size: 0;
+		}
+		@include respond-to(small-all) {
+			display: none;
+		}
+
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 20px;
+			top: 17px;
+			@include retina-sprite($sp-i-dictionary-header-group);
+			@include respond-to(small-all) {
+				left: 6px;
+				top: 3px;
+			}
 		}
 	}
 }
@@ -45,10 +113,6 @@ $c-eclipse          : return-value(color, eclipse);
 .nav,
 .search,
 .lang {
-	display: inline-block;
-	margin-right: -.32em;
-	vertical-align: top;
-
 	height: 56px;
 	@include respond-to(small-all) {
 		height: 29px;
@@ -56,28 +120,37 @@ $c-eclipse          : return-value(color, eclipse);
 }
 
 
-.nav,
-.search,
+.search {
+	border-top: 2px solid $c-eclipse;
+	border-bottom: 2px solid $c-eclipse;
+}
+
+
 .lang {
+	border: 2px solid $c-eclipse;
+}
+
+
+.nav {
 	border-top: 2px solid $c-eclipse;
 	border-bottom: 2px solid $c-eclipse;
 	border-right: 2px solid $c-eclipse;
+}
+
+
+.nav,
+.search,
+.lang {
 	@include respond-to(small-all) {
 		border-width: 1px;
 	}
 }
 
 
-.nav {
-	@include respond-to(small-all) {
-		width: 40px;
-	}
-}
-
-
 .search,
 .lang {
 	@include respond-to(small-all) {
-		width: 31px;
+		width: 30px;
+		top: 28px;
 	}
 }

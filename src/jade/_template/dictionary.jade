@@ -12,6 +12,9 @@
     var dictionaryLink = [
         "Еще один толчок", "Третий толчок", "Толчище", "Толчок в квадрате", "Еще один толчок", "Третий толчок", "Толчище", "Толчок в квадрате"
     ];
+    var dictionaryLinkAttr = [
+        "0", "1", "2", "3", "4", "5", "6", "7"
+    ];
     var dictionaryLink0 = [
         "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor"
     ];
@@ -19,31 +22,49 @@
         "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum", "Lorem ipsum dolor", "Lorem ipsum"
     ];
 
-    var dictionaryTitle = "<span class='dictionary__sub-title_first'>Толчок</span> предпринимательству развивающихся рынков: Seedstars World едут в Украину.";
-    var dictionarySubTitle = "<span class='dictionary__sub-desc_first'>Толчок</span> - туалет, помещение для справления естественных нужд человека";
+    var dictionaryTitle = "<a href='javascript:void(0);' class='dictionary__sub-title_first'>Толчок</a> предпринимательству развивающихся рынков: Seedstars World едут в Украину.";
+    var dictionarySubTitle = "<a href='javascript:void(0);' class='dictionary__sub-desc_first'>Толчок</a> - туалет, помещение для справления естественных нужд человека";
+
+    var dictionaryTitle1 = "<a href='javascript:void(0);' class='dictionary__sub-title_first'>Третий толчок</a> предпринимательству развивающихся рынков: Seedstars World едут в Украину.";
+    var dictionarySubTitle1 = "<a href='javascript:void(0);' class='dictionary__sub-desc_first'>Третий толчок</a> - туалет, помещение для справления естественных нужд человека";
+
+    var dictionaryTitle2 = "<a href='javascript:void(0);' class='dictionary__sub-title_first'>Еще один толчок</a> предпринимательству развивающихся рынков: Seedstars World едут в Украину.";
+    var dictionarySubTitle2 = "<a href='javascript:void(0);' class='dictionary__sub-desc_first'>Еще один толчок</a> - туалет, помещение для справления естественных нужд человека";
 
 
 mixin dictionaryContent(titleName, subTitleName, dictionaryArr)
-    .dictionary__left
+    div(class="dictionary__left dictionary__left-0 active" )
         p.dictionary__sub-title!= titleName
-
         p.dictionary__sub-desc!= subTitleName
+        a(href="javascript:void(0);", class="dictionary__more")!= "Читать больше"
+
+    div(class="dictionary__left dictionary__left-1" )
+        p.dictionary__sub-title!= dictionaryTitle1
+        p.dictionary__sub-desc!= dictionarySubTitle1
+        a(href="javascript:void(0);", class="dictionary__more")!= "Читать больше"
+
+    div(class="dictionary__left dictionary__left-2" )
+        p.dictionary__sub-title!= dictionaryTitle2
+        p.dictionary__sub-desc!= dictionarySubTitle2
+        a(href="javascript:void(0);", class="dictionary__more")!= "Читать больше"
 
     .dictionary__right
         ul.dictionary__item-link
             - for(var j = 0; j < dictionaryArr.length; j++)
                 if(j < 4)
                     li.dictionary__list-link
-                        a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryArr[j]
+                        a(href="javascript:void(0);", class="dictionary__btn-link" data-cotnent= dictionaryLinkAttr[j])!= dictionaryArr[j]
                 else
                     li.dictionary__list-link.hide
                         a(href="javascript:void(0);", class="dictionary__btn-link")!= dictionaryArr[j]
+
+        a(href="javascript:void(0);", class="dictionary__add")!= "и еще 15 слов"
 
 
 .dictionary
     .container.dictionary__container
 
-        .dictionary__top
+        .dictionary__top.dictionary__top_hidden
             p.dictionary__title!= "Словарь"
 
             .dictionary__latter

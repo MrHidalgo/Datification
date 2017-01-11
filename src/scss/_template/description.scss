@@ -23,61 +23,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 /// MAIN BLOCK
 ///
 .description {
-	&__header {}
-
-
-	&__footer {
-		@include mixinDimensions(272px, 56px);
-		margin-bottom: 40px;
-
-
-		&-left {
-			@include mixinDimensions(74px, $w-all);
-			border-right: 2px solid lighten($c-nobel, 10%);
-
-
-			&:before {
-				content: "";
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				margin: auto;
-				@include retina-sprite($sp-i-fb-group);
-			}
-		}
-
-
-		&-center {
-			@include mixinDimensions((272 - 74 - 64) * 1px, $w-all);
-		}
-
-
-		&-right {
-			@include mixinDimensions(64px, $w-all);
-			border-left: 2px solid lighten($c-nobel, 10%);
-		}
-
-
-		&-center,
-		&-right {
-			color: $c-white;
-			line-height: 56px;
-			text-align: center;
-			font-family: $f-PN_bold;
-			text-transform: uppercase;
-		}
-
-
-		&-left,
-		&-center,
-		&-right {
-			position: relative;
-			float: left;
-			background-color: #3b5998;
-		}
-	}
 
 
 	&__img {
@@ -107,6 +52,7 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 			height: 2px;
 			background-color: $c-nobel;
 			margin-bottom: 10px;
+			margin-top: 0;
 		}
 
 
@@ -148,9 +94,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 		&-data {
-			@include respond-to(small-all) {
-				margin-left: 0;
-			}
 			&:before {
 				@include retina-sprite($sp-i-block-data-group);
 			}
@@ -158,6 +101,9 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 		&-see {
+			@include respond-to(small-all) {
+				margin-left: 0;
+			}
 			&:before {
 				@include retina-sprite($sp-i-block-see-group);
 			}
@@ -172,7 +118,7 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		}
 		color: $c-shakespeare;
 		text-transform: uppercase;
-		margin-bottom: 60px;
+		margin-bottom: 20px;
 		line-height: 1.2;
 
 
@@ -192,7 +138,7 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 			size: 20px;
 			family: $f-PN_bold;
 		}
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 	}
 
 

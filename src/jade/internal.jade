@@ -16,13 +16,17 @@ html(lang="en")
 
 
         .blocks.blocks__internal
-            .container.clearfix
+            .container.clearfix.blocks__fixed
                 .blocks__left
                     include ./_template/description
 
                 .blocks__right
-                    include ./_template/advertising
+                    .advertising__top
 
+                    +blockNewsLoop("blocks__row_column", 3, 2, "block_hide")
+
+        .comments
+            .container
 
         //- BLOCK FOOTER
         block footer

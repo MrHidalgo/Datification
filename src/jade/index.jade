@@ -10,6 +10,7 @@ html(lang="en")
 
     body
 
+
         //- BLOCK HEADER [nav, bottomInfo, logo, slogan]
         block header
             include ./_template/header
@@ -21,7 +22,7 @@ html(lang="en")
             .container.clearfix
                 .blocks__left
 
-                    +blockNewsLoop(4, 2, "block_hide")
+                    +blockNewsLoop("", 4, 2, "block_hide")
 
                 .blocks__right
                     include ./_template/advertising
@@ -32,7 +33,7 @@ html(lang="en")
 
 
         .container
-            +blockNewsLoop(6, 4, "block_hide")
+            +blockNewsLoop("blocks__row_all", 6, 4, "block_hide")
 
 
         block dictionary
@@ -40,7 +41,7 @@ html(lang="en")
 
 
         .container
-            +blockNewsLoop(3, 2, "block_hide")
+            +blockNewsLoop("blocks__row_all", 3, 2, "block_hide")
 
 
         block events

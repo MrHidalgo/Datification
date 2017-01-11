@@ -45,6 +45,10 @@ $c-white            : return-value(color, white);
 
 	&__right {
 		width: 300px;
+		//position: fixed;
+		//top: 190px;
+		//right: 0;
+		//padding-bottom: 530px;
 	}
 
 
@@ -64,6 +68,37 @@ $c-white            : return-value(color, white);
 		flex-flow: wrap row;
 		align-items: flex-start;
 		justify-content: flex-start;
+
+
+		&_all {
+			justify-content: space-between;
+
+
+			.block {
+				margin-right: 0;
+			}
+		}
+
+
+		&_column {
+			@include respond-to(medium) {
+				justify-content: space-between !important;
+			}
+
+
+			.block {
+				@include respond-to(medium-min) {
+					width: 300px;
+					margin-right: 0 !important;
+				}
+
+				&__img-wrap {
+					@include respond-to(medium-min) {
+						width: 300px;
+					}
+				}
+			}
+		}
 	}
 }
 

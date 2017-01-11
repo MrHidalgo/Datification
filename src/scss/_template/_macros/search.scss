@@ -15,12 +15,14 @@ $c-white_smoke      : return-value(color, white_smoke);
 $c-shakespeare      : return-value(color, shakespeare);
 $c-cerulean         : return-value(color, cerulean);
 $c-night_rider      : return-value(color, night_rider);
+$c-eclipse          : return-value(color, eclipse);
 
 $f-PN_regular       : return-value(fonts, PN_regular);
 ///
 /// MAIN BLOCK
 ///
 .search {
+	float: right;
 	position: relative;
 	width: 60px;
 
@@ -36,13 +38,13 @@ $f-PN_regular       : return-value(fonts, PN_regular);
 
 	&__btn {
 		display: block;
-		width: 57px;
+		width: 60px;
 		float: right;
 		text-align: center;
 		padding-top: 15px;
 		padding-bottom: 15px;
 		@include respond-to(small-all) {
-			width: 29px;
+			width: 30px;
 			height: 27px;
 			padding: 0;
 		}
@@ -70,22 +72,28 @@ $f-PN_regular       : return-value(fonts, PN_regular);
 	&__form {
 		display: none;
 		position: absolute;
-		@include mixinDimensions(619px, 52px);
-		left: -620px;
-		top: 0;
+		z-index: 11;
+		width: (746 - 125) * 1px;
+		height: 52px;
+		right: 140px;
+		top: 2px;
+		border-right: 2px solid $c-eclipse;
 		@include respond-to(large) {
-			width: 359px;
-			left: -360px;
+			width: (486 - 125) * 1px;
 		}
 		@include respond-to(medium) {
-			width: 559px;
-			left: -560px;
+			width: (690 - 125) * 1px;
+			border-left: 2px solid $c-eclipse;
 		}
 		@include respond-to(small-all) {
-			width: (220 + 39) * 1px;
-			height: 27px;
-			left: auto;
-			right: 30px;
+			display: block;
+			width: calc(100% - 90px);
+			height: 28px;
+			right: 75px;
+			top: 29px;
+			border-left: 1px solid $c-eclipse;
+			border-bottom: 1px solid $c-eclipse;
+			border-width: 1px;
 		}
 	}
 
@@ -106,6 +114,8 @@ $f-PN_regular       : return-value(fonts, PN_regular);
 		}
 		@include respond-to(small-all) {
 			padding-left: 20px;
+			background-color:$c-white;
+			font-size: 14px;
 		}
 	}
 }

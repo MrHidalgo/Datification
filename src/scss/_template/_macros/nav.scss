@@ -20,54 +20,149 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 /// MAIN BLOCK
 ///
 .nav {
-	width: 622px;
-	@include respond-to(large) {
-		width: 362px;
-	}
+	float: right;
+	width: calc(100% - (125px + 152px));
 	@include respond-to(medium) {
-		width: 142px;
+		width: calc(100% - (125px + 60px));
+	}
+	@include respond-to(small-all) {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		width: calc(100% - 30px);
+	}
+
+
+	&__more {
+		display: none;
+		float: left;
+		padding-right: 10px;
+		line-height: 54px;
+		height: 54px;
+
+
+		&.show {
+			@include respond-to(extra-large) {
+				display: block;
+			}
+		}
+
+
+		&-text {
+			padding-left: 10px;
+			text-transform: uppercase;
+			color: $c-night_rider;
+			font: {
+				family: $f-PN_bold;
+			}
+		}
+
+
+		&-line {
+			display: inline-block;
+			margin-left: 10px;
+			position: relative;
+			top: 3px;
+			@include mixinDimensions(20px, 17px);
+
+
+			&-0 {
+				top: 0;
+			}
+			&-1 {
+				top: 5px;
+			}
+			&-2 {
+				top: 10px;
+			}
+			&-3 {
+				bottom: 0;
+			}
+
+			&-0,
+			&-1,
+			&-2,
+			&-3 {
+				position: absolute;
+				left: 0;
+				@include mixinDimensions($w-all, 2px);
+				background-color: $c-night_rider;
+			}
+		}
 	}
 
 
 	&__list {
+		display: none;
 		height: 52px;
-		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		@include respond-to(large-all) {
+			display: none;
+			position: absolute;
+			background-color: $c-white_smoke;
+			z-index: 11;
+			top: 56px;
+			width: calc(100% - 30px);
+			height: auto;
+			left: 15px;
+			padding-top: 30px;
+			padding-left: 40px;
+			padding-right: 40px;
+			border-left: 2px solid $c-eclipse;
+			border-bottom: 2px solid $c-eclipse;
+			border-right: 2px solid $c-eclipse;
+		}
+		@include respond-to(small-all) {
+			width: 100.2%;
+			left: 0;
+			top: 28px;
+			padding: 30px 15px 0;
+			border-width: 1px;
+			background-color: $c-white;
+		}
 
 
-		&_small {
-			@include respond-to(medium-all) {
-				display: none;
+		&.show {
+			@include respond-to(extra-large) {
+				display: flex !important;
+			}
+		}
+
+
+		.show & {
+			@include respond-to(extra-large) {
 				position: absolute;
 				background-color: $c-white_smoke;
 				z-index: 11;
 				top: 56px;
-				width: calc(100% - 32px);
-				height: auto;
 				left: 15px;
-				padding-top: 50px;
-				padding-left: 50px;
-				padding-right: 50px;
+				width: calc(100% - 30px);
+				height: auto;
+				padding: 30px 40px;
 				border-left: 2px solid $c-eclipse;
 				border-bottom: 2px solid $c-eclipse;
 				border-right: 2px solid $c-eclipse;
 			}
-			@include respond-to(small-all) {
-				top: 29px;
-				left: 0;
-				right: 0;
-				margin: auto;
-				width: 320px;
-				padding: 30px 15px 0;
-				border-width: 1px;
-				background-color: $c-white;
+
+
+			.nav__item {
+				float: left;
+				width: (100 / 2) * 1%;
+				margin-bottom: 30px;
 			}
 		}
 	}
 
 
 	&__item {
+		@include respond-to(large-all) {
+			float: left;
+			width: (100 / 2) * 1%;
+			margin-bottom: 30px;
+		}
+
+
 		&.active {
 			.nav__link {
 				color: $c-cerulean;
@@ -81,14 +176,6 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 		color: $c-night_rider;
 		font: {
 			family: $f-PN_bold;
-		}
-		@include respond-to(large) {
-			font-size: 14px;
-		}
-		@include respond-to(medium-all) {
-			width: 50%;
-			margin-bottom: 50px;
-			float: left;
 		}
 		@include respond-to(small-all) {
 			margin-bottom: 30px;
@@ -108,8 +195,11 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 			margin-top: 13.5px;
 			margin-right: 25px;
 			@include mixinDimensions(36px, 25px);
-			@include respond-to(medium-all) {
+			@include respond-to(large-all) {
 				display: block;
+			}
+			@include respond-to(medium) {
+				margin-right: 22px;
 			}
 			@include respond-to(small-all) {
 				margin-top: 6.5px;

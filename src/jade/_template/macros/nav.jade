@@ -2,12 +2,21 @@
     var navLink = [
         "Главная",
         "Статьи",
+        "Статьи",
         "Словарь",
         "Партнеры"
     ];
 
 
 nav.nav.clearfix
+    a(href="javascript:void(0);", class="nav__more clearfix")
+        span.nav__more-line
+            span.nav__more-line-0
+            span.nav__more-line-1
+            span.nav__more-line-2
+            span.nav__more-line-3
+        span.nav__more-text!= "рубрики"
+
     ul.nav__list.clearfix
         -for(var i = 0; i < navLink.length; i++)
             li.nav__item

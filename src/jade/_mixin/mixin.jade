@@ -41,8 +41,8 @@ mixin newsBLock(className, title)
                     | 2648
 
 
-mixin blockNewsLoop(countNum, addClassCount, className)
-    .blocks__row
+mixin blockNewsLoop(classMain, countNum, addClassCount, className)
+    div(class="blocks__row " + classMain)
         -for(var i = 0; i < countNum; i++)
             if(i < addClassCount)
                 if(i % 2 === 0)

@@ -18,20 +18,18 @@ mixin descTextBlock(titleName, textArr)
 
 .description
     .description__header
-        .description__img-wrap
-            img(src="./img/img-description.png", alt="", title="", class="description__img")
+        h1.description__title!= "Зубная щетка, стиральная машинка, термостат и счетчик: что они о нас знают?"
 
+        h2.description__sub-title!= "Мы выяснили, какую информацию о нас могут узнать бытовые приборы и как это изменит жизнь."
 
         .description__info.clearfix
             hr.description__info-line
             p.description__info-author!= "<span class='description__info-author_gray'>Автор:</span>Плешаков Дмитрий"
-            p.description__info-data!= "4. 12. 2016"
             p.description__info-see!= "2648"
+            p.description__info-data!= "4. 12. 2016"
 
-
-        h1.description__title!= "Зубная щетка, стиральная машинка, термостат и счетчик: что они о нас знают?"
-
-        h2.description__sub-title!= "Мы выяснили, какую информацию о нас могут узнать бытовые приборы и как это изменит жизнь."
+        .description__img-wrap
+            img(src="./img/img-description.png", alt="", title="", class="description__img")
 
         .description__paragraph
             +descTextBlock("Зубная щетка", descArr)
@@ -53,14 +51,3 @@ mixin descTextBlock(titleName, textArr)
 
         .description__paragraph
             +descTextBlock("Счетчики", descArr)
-
-
-
-    .description__footer.clearfix
-        a(href="javascript:void(0);", title="", class="description__footer-left description__footer-fb")
-        a(href="javascript:void(0);", title="", class="description__footer-center description__footer-share")!= "Поделиться"
-        a(href="javascript:void(0);", title="", class="description__footer-right description__footer-count")!= "123"
-
-
-
-

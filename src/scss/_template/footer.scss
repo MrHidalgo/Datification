@@ -17,6 +17,7 @@ $c-shakespeare      : return-value(color, shakespeare);
 $c-dim_gray         : return-value(color, dim_gray);
 $c-nobel            : return-value(color, nobel);
 $c-night_rider      : return-value(color, night_rider);
+$c-white_smoke      : return-value(color, white_smoke);
 
 $f-PN_black         : return-value(fonts, PN_black);
 $f-PN_bold          : return-value(fonts, PN_bold);
@@ -24,116 +25,107 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 /// MAIN BLOCK
 ///
 .footer {
-	min-height: 225px;
-	border-top: 2px solid $c-shakespeare;
+	min-height: 390px;
+	padding-top: 80px;
+	padding-bottom: 60px;
 
 
-	&__container {
-		display: flex;
-		align-items: center;
-		min-height: 225px;
-		@include respond-to(small-all) {
-			flex-flow: wrap row;
-			align-content: center;
-		}
-	}
-
-
-	&__logo,
-	&__menu,
-	&__copyright,
-	&__btn {
+	&__subscribe {
 		float: left;
-		@include respond-to(small-all) {
-			float: none;
-		}
-	}
-
-
-	&__menu {
-		@include mixinDimensions(525px, 56px);
-		border-top: 2px solid $c-night_rider;
-		border-right: 2px solid $c-night_rider;
-		border-bottom: 2px solid $c-night_rider;
-		@include respond-to(medium-all) {
-			display: none;
-		}
-	}
-
-
-	&__list {
-		height: 54px;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-
-
-	&__item-btn {
-		font-family: $f-PN_bold;
-		text-transform: uppercase;
-		color: $c-night_rider;
-		@include respond-to(large) {
-			font-size: 14px;
-		}
-
-
-		&:hover {
-			color: $c-shakespeare;
-			transition: all .3s ease-in-out;
-		}
-
-
-		&:active {
-			color: $c-cerulean;
-		}
-	}
-
-
-	&__copyright {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-
-		@include mixinDimensions(310px, 56px);
+		width: calc(100% - 74px);
+		height: 56px;
 		background-color: $c-night_rider;
-		@include respond-to(medium) {
-			width: 354px;
-		}
-		@include respond-to(small-all) {
-			width: 100%;
-			order: 2;
-		}
 
 
 		&-text {
+			float: left;
+			width: calc(100% - 670px);
+			line-height: 56px;
+			padding-left: 20px;
 			color: $c-white;
+			font: {
+				size: 16px;
+				family: $f-PN_bold;
+			}
+			@include respond-to(large) {
+				width: calc(100% - 500px);
+			}
+			@include respond-to(medium-all) {
+				width: calc(100% - 400px);
+				height: 56px;
+				line-height: 1.2;
+			}
+			@include respond-to(small-all) {
+				display: none;
+			}
+
+
+			span {
+				@include respond-to(medium-all) {
+					vertical-align: middle;
+					display: inline-block;
+				}
+			}
+
+
+			&:before{
+				@include respond-to(medium-all) {
+					content: "";
+					height: 100%;
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
 		}
-	}
 
 
-	&__icon {
-		@include retina-sprite($sp-i-logo-septa-group);
-	}
-
-
-	&__btn {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		@include mixinDimensions(261px, 56px);
-		background-color: $c-night_rider;
-		@include respond-to(small-all) {
-			width: calc(100% - 74px);
-			justify-content: flex-start;
+		&-wrap {
+			float: right;
+			width: 670px;
+			height: 56px;
+			@include respond-to(large) {
+				width: 500px;
+			}
+			@include respond-to(medium) {
+				width: 400px;
+			}
+			@include respond-to(small-all) {
+				width: 100%;
+			}
 		}
 
 
-		&-subscribe {
+		&-input {
+			width: calc(100% - 203px);
+			height: 56px;
+			border-top: 2px solid $c-night_rider;
+			border-left: 2px solid $c-night_rider;
+			border-right: 1px solid $c-night_rider;
+			border-bottom: 2px solid $c-night_rider;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 16px;
+			border-radius: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			@include respond-to(medium-all) {
+				width: calc(100% - 183px);
+			}
+			@include respond-to(small-all) {
+				display: none;
+			}
+		}
+
+
+		&-btn {
+			float: right;
 			@include mixinDimensions(203px, 56px);
 			line-height: 54px;
-			border: 2px solid $c-night_rider;
+			border-top: 2px solid $c-night_rider;
+			border-right: 2px solid $c-night_rider;
+			border-bottom: 2px solid $c-night_rider;
+			border-left: 1px solid $c-night_rider;
 			background-color: $c-shakespeare;
 			text-transform: uppercase;
 			color: $c-white;
@@ -142,50 +134,103 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 				size: 18px;
 				family: $f-PN_bold;
 			}
+			@include respond-to(medium-all) {
+				width: 183px;
+			}
 			@include respond-to(small-all) {
-				width: calc(100% - ((261 - 203) * 1px));
-				border-top: 2px solid $c-night_rider;
-				border-right: 2px solid $c-night_rider;
-				border-bottom: 2px solid $c-night_rider;
-				border-left: 1px solid $c-night_rider;
+				width: 100%;
+				border-left: 0;
 			}
+		}
+	}
 
 
-			&:active {
-				color: $c-night_rider;
-				background-color: $c-cerulean;
-			}
+	&__menu {
+		width: $w-all;
+		height: (390 - 56*2) * 1px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 40px;
+		border-left: 2px solid $c-night_rider;
+		border-right: 2px solid $c-night_rider;
+		background-color: $c-white-smoke;
+
+		display: flex;
+		justify-content: flex-start;
+		@include respond-to(small-all) {
+			height: 248px;
+			padding: 30px 15px 0;
+		}
+	}
 
 
-			&:hover {
-				color: $c-night_rider;
-				transition: all .3s ease-in-out;
-			}
+	&__list {
+		min-width: 150px;
+		margin-right: 20px;
+		text-align: left;
+		@include respond-to(small-all) {
+			min-width: 50%;
+			margin-right: 0;
 		}
 
 
-		&-fb {
-			position: relative;
-			@include mixinDimensions((261 - 203) * 1px, 56px);
-			background-color: $c-night_rider;
+		&-hide {
 			@include respond-to(small-all) {
-				border-top: 2px solid $c-night_rider;
-				border-right: 2px solid $c-night_rider;
-				border-bottom: 2px solid $c-night_rider;
-				background-color: $c-shakespeare;
+				display: none;
 			}
+		}
+	}
 
 
-			&:before {
-				content: "";
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				margin: auto;
-				@include retina-sprite($sp-i-fb-group);
-			}
+	&__item-btn {
+		display: block;
+		color: $c-night_rider;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		font: {
+			size: 16px;
+			family: $f-PN_bold;
+		}
+	}
+
+
+	&__copyright {
+		height: 56px;
+		background-color: $c-night_rider;
+
+
+		&-text {
+			float: left;
+			margin-left: 40px;
+			color: $c-white;
+			line-height: 56px;
+		}
+	}
+
+
+	&__icon {
+		float: left;
+		margin-top: 10px;
+		margin-left: 30px;
+		@include retina-sprite($sp-i-logo-septa-group);
+	}
+
+
+	&__btn-fb {
+		float: right;
+		position: relative;
+		@include mixinDimensions(58px, 56px);
+
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			@include retina-sprite($sp-i-fb-group);
 		}
 	}
 }
@@ -194,6 +239,7 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 /* logotype footer */
 .footer {
 	&__logo {
+		float: left;
 		width: 74px;
 	}
 

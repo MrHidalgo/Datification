@@ -13,16 +13,32 @@ footer.footer
         img(src="./img/img-logotype-footer.png", alt="", title="", class="footer__logo footer__img_normal")
         img(src="./img/img-logotype-footer@2x.png", alt="", title="", class="footer__logo footer__img_retina")
 
+
+        .footer__subscribe.clearfix
+            p.footer__subscribe-text!= "<span>Подпишитесь на рассылку обновлений</span>"
+            .footer__subscribe-wrap.clearfix
+                input(type="text", name="subscribe", placeholder="Введите свой e-mail", class="footer__subscribe-input")
+                a(
+                    href="javascript:void(0);",
+                    title="",
+                    class="footer__subscribe-btn"
+                )!= "Подписаться"
+
         .footer__menu
             ul.footer__list
                 -for(var i = 0; i < footerMenu.length; i++)
                     li.footer__item
-                        a(href="javascript:void(0);", alt="", title="", class="footer__item-btn")!= footerMenu[i]
+                        a(href="javascript:void(0);", title="", class="footer__item-btn")!= footerMenu[i]
+            ul.footer__list
+                -for(var j = 0; j < footerMenu.length; j++)
+                    li.footer__item
+                        a(href="javascript:void(0);", title="", class="footer__item-btn")!= footerMenu[j]
+            ul.footer__list.footer__list-hide
+                -for(var k = 0; k < footerMenu.length; k++)
+                    li.footer__item
+                        a(href="javascript:void(0);", title="", class="footer__item-btn")!= footerMenu[k]
 
-        .footer__copyright
+        .footer__copyright.clearfix
             i.footer__icon
             p.footer__copyright-text!= 'Copyright © 2016'
-
-        .footer__btn.clearfix
-            a(href="javascript:void(0);", alt="", title="", class="footer__btn-subscribe")!= "Подписаться"
             a(href="javascript:void(0);", alt="", title="", class="footer__btn-fb")

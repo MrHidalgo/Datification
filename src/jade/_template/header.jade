@@ -1,16 +1,24 @@
 
-header.header
+header.header.animated
     .container
 
         .header__row.clearfix
 
-            include macros/logotype
+            .header__left.clearfix
+                include macros/logotype
+
+            .header__right.clearfix
 
 
-            include macros/nav
+                a(
+                    href="javascript:void(0);"
+                    title=""
+                    class="header__btn btn-dictionary"
+                )!= "Словарь"
 
 
-            include macros/search
+                include macros/lang
 
+                include macros/search
 
-            include macros/lang
+                include macros/nav
