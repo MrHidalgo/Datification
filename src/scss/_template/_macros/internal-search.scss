@@ -1,0 +1,117 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+
+@import "../../_variable/sprite_dat";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-cerulean         : return-value(color, cerulean);
+$c-night_rider      : return-value(color, night_rider);
+$c-eclipse          : return-value(color, eclipse);
+
+$f-PN_regular       : return-value(fonts, PN_regular);
+///
+/// MAIN BLOCK
+///
+.internal-search {
+	height: 56px;
+	margin-bottom: 60px;
+	@include respond-to(small-all) {
+		margin-bottom: 30px;
+		height: 27px;
+	}
+
+
+	&.active {
+		.search__btn {
+			@include respond-to(medium-min) {
+				background-color: $c-cerulean;
+			}
+		}
+	}
+
+
+	&__btn {
+		display: block;
+		width: 60px;
+		float: right;
+		text-align: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border: 2px solid $c-night_rider;
+		@include respond-to(small-all) {
+			width: 30px;
+			height: 27px;
+			padding: 0;
+			border-width: 1px;
+		}
+
+
+		&:hover {
+			background-color: $c-shakespeare;
+			transition: all .3s ease-in-out;
+		}
+
+
+		&-icon {
+			display: inline-block;
+			vertical-align: middle;
+			@include retina-sprite($sp-i-search-group);
+			@include respond-to(small-all) {
+				position: relative;
+				top: 1px;
+				@include retina-sprite($sp-i-search-mobile-group);
+			}
+		}
+	}
+
+
+	&__form {
+		width: calc(100% - 60px);
+		height: 56px;
+		border-left: 2px solid $c-eclipse;
+		border-top: 2px solid $c-eclipse;
+		border-bottom: 2px solid $c-eclipse;
+		@include respond-to(small-all) {
+			width: calc(100% - 30px);
+			height: 27px;
+			border-width: 1px;
+		}
+	}
+
+
+	&__input {
+		@include mixinDimensions($w-all);
+		background-color: $c-white_smoke;
+		border: none;
+		font: {
+			family: $f-PN_regular;
+			size: 16px;
+		}
+		color: $c-night_rider;
+		padding-left: 40px;
+		padding-right: 20px;
+		@include respond-to(large) {
+			padding-left: 20px;
+		}
+		@include respond-to(small-all) {
+			padding-left: 20px;
+			background-color:$c-white;
+			font-size: 14px;
+		}
+	}
+}
+
+
+input[name="search"]::-webkit-input-placeholder {color: $c-night_rider;}
+input[name="search"]::-moz-placeholder {color: $c-night_rider;}
+input[name="search"]:-moz-placeholder {color: $c-night_rider;}
+input[name="search"]::placeholder {color: $c-night_rider;}

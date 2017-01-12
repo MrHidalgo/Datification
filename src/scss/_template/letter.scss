@@ -1,0 +1,47 @@
+///
+/// IMPORT BLOCK
+///
+@import "../_mixin/mixin";
+@import "../_function/function";
+
+@import "../_template/_macros/internal-search";
+@import "../_template/_macros/alphabet";
+@import "../_template/_macros/list";
+
+@import "../_variable/sprite_dat";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-black            : return-value(color, black);
+$c-cerulean         : return-value(color, cerulean);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-dim_gray         : return-value(color, dim_gray);
+$c-nobel            : return-value(color, nobel);
+$c-night_rider      : return-value(color, night_rider);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-eclipse          : return-value(color, eclipse);
+
+$f-PN_black         : return-value(fonts, PN_black);
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.letter {
+  margin-bottom: 40px;
+
+
+  &__title {
+    font: {
+      size: 18px;
+      family: $f-PN_bold;
+    }
+    color: $c-eclipse;
+    margin-bottom: 10px;
+    @include respond-to(small-all) {
+      font-size: 14px;
+    }
+  }
+}

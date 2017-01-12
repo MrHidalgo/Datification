@@ -18,14 +18,6 @@ $(window).on("load resize ready scroll", function(){
     if($(window).width() > '1024') {
         scrollWindowNavigationFixedLarge();
     }
-
-
-    var containerOffserLeft = $(".blocks__fixed").offset().left + 15;
-    $('.blocks__fixed .blocks__right').css(
-        {
-            "right" : containerOffserLeft
-        }
-    );
 });
 
 
@@ -146,6 +138,15 @@ $(document).ready(function() {
     });
 
 
+    /* ALPHABET */
+    $(".alphabet__btn").on("click", function(e) {
+        e.preventDefault();
+
+        $(".alphabet__item").removeClass("active");
+        $(this).closest(".alphabet__item").addClass("active");
+    });
+
+
     /* EVENTS */
     if($('.events__carousel').length > 0) {
         $('.events__carousel').owlCarousel({
@@ -166,8 +167,4 @@ $(document).ready(function() {
             }
         })
     }
-
-
-    /* RIGHT CONTENT FIXED in SCROLL */
-
 });

@@ -21,5 +21,15 @@
   "scriptLinkInternal" : [
     "./script/jquery-1.11.1.min.js",
     "./script/main.min.js"
+  ],
+
+  "styleLinkDictionary" : [
+    "./css/dictionary.min.css",
+    "./css/fonts.min.css"
+  ],
+
+  "scriptLinkDictionary" : [
+    "./script/jquery-1.11.1.min.js",
+    "./script/main.min.js"
   ]
 }

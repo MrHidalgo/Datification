@@ -1,0 +1,63 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-night_rider      : return-value(color, night_rider);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-cerulean         : return-value(color, cerulean);
+$c-eclipse          : return-value(color, eclipse);
+$c-dim_gray         : return-value(color, dim_gray);
+
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.list {
+
+
+	&__title {
+		font : {
+			size: 20px;
+		}
+		color: $c-cerulean;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+
+	&__list {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		margin-bottom: 30px;
+	}
+
+
+	&__item {
+		width: (100 / 3) * 1%;
+		margin-bottom: 10px;
+		@include respond-to(small-all) {
+			flex: 1 145px;
+		}
+	}
+
+
+	&__btn {
+		font-size: 18px;
+		color: $c-cerulean;
+
+
+		&:hover {
+			color: $c-shakespeare;
+			transition: all .3s ease-in-out;
+		}
+	}
+}

@@ -894,72 +894,10 @@ input[name="search"]::placeholder {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   
-  .blocks__internal .advertising .advertising__top {
-    float: right;
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  
   .blocks__internal .advertising .advertising__bottom {
     float: left;
     width: 50%;
   }
-}
-
-
-.advertising__top {
-  max-width: 300px;
-  height: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #363636;
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 479px) {
-  
-  .advertising__top {
-    max-width: 320px;
-  }
-}
-
-
-.advertising__title {
-  font-size: 25px;
-  font-family: "Proxima Nova Black";
-  text-transform: uppercase;
-  color: #67a2c0;
-  line-height: 1;
-  position: relative;
-}
-
-
-.advertising__title:hover {
-  cursor: pointer;
-  color: #007bbe;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-
-.advertising__title:hover:after {
-  background-color: #007bbe;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-
-.advertising__title:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: -3px;
-  left: 1px;
-  height: 8px;
-  background-color: #67a2c0;
 }
 
 
@@ -2553,6 +2491,71 @@ input[name="search"]::placeholder {
     margin-right: 5px;
   }
 }
+
+
+
+.main__title {
+  font-size: 25px;
+  font-family: "Proxima Nova Black";
+  text-transform: uppercase;
+  color: #67a2c0;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+.main__title:hover {
+  cursor: pointer;
+  color: #007bbe;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+.main__title:hover:after {
+  background-color: #007bbe;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+.main__title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
+  left: 1px;
+  height: 8px;
+  background-color: #67a2c0;
+}
+
+
+
+.advertising__block {
+  max-width: 300px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #363636;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 479px) {
+  
+  .advertising__block {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .blocks__internal .advertising__block {
+    width: 300px;
+  }
+}
+
 
 
 .comments {

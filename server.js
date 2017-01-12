@@ -1,7 +1,7 @@
 var	express	    =	require('express'),
     app         =	express();
 
-app.set('port',	(process.env.PORT	||	3333));
+app.set('port',	(process.env.PORT	||	33333));
 
 
 // MAIN PAGE
@@ -11,6 +11,10 @@ app.use('/',	        express.static('./dist/', {
 // SECOND PAGE
 app.use('/internal',	        express.static('./dist/', {
         'index' : 'internal.html'
+}));
+// DICTIONARY PAGE
+app.use('/dictionary',	        express.static('./dist/', {
+        'index' : 'dictionary.html'
 }));
 
 

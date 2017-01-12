@@ -5,7 +5,7 @@ doctype html
 html(lang="en")
 
 
-    +headSite("Datification", linkSite.styleLinkInternal, "")
+    +headSite("Datification", linkSite.styleLinkDictionary, "")
 
 
     body
@@ -18,22 +18,21 @@ html(lang="en")
         .blocks.blocks__internal
             .container.clearfix.blocks__fixed
                 .blocks__left
-                    include ./_template/description
+                    include ./_template/letter
+
 
                 .blocks__right
                     .advertising__top.advertising__block
 
-                    p.main__title!= "похожие статьи"
+                    p.main__title!= "последние статьи"
 
                     +blockNewsLoop("blocks__row_column", 3, 2, "block_hide")
 
-        .comments
-            .container
 
         //- BLOCK FOOTER
         block footer
             include ./_template/footer
 
 
-        - for(var i = 0; i < linkSite.scriptLinkInternal.length; i++)
-            script(src= linkSite.scriptLinkInternal[i])
+        - for(var i = 0; i < linkSite.scriptLinkDictionary.length; i++)
+            script(src= linkSite.scriptLinkDictionary[i])

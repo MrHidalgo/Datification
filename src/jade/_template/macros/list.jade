@@ -1,0 +1,32 @@
+-
+    var listWords = [
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'",
+        "Слово на букву '...'"
+    ];
+
+mixin list(titleName, count)
+    p.list__title!= titleName
+    ul.list__list
+        -for(var i = 0; i < count; i++)
+            li.list__item
+                a(
+                    href="javascript:void(0);"
+                    title=""
+                    class="list__btn"
+                )!= listWords[i]
+
+.list
+    +list("A", 6)
+    +list("Б", 3)
+    +list("В", 4)
+    +list("Г", 5)
+    +list("Д", 7)
+    +list("Е", 2)

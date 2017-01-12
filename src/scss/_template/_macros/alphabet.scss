@@ -1,0 +1,76 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_function/function";
+///
+/// DECLARATION VARIABLE
+///
+$w-all              : return-value(dimension, all);
+
+$c-white            : return-value(color, white);
+$c-white_smoke      : return-value(color, white_smoke);
+$c-night_rider      : return-value(color, night_rider);
+$c-shakespeare      : return-value(color, shakespeare);
+$c-cerulean         : return-value(color, cerulean);
+$c-eclipse          : return-value(color, eclipse);
+$c-dim_gray         : return-value(color, dim_gray);
+
+$f-PN_bold          : return-value(fonts, PN_bold);
+///
+/// MAIN BLOCK
+///
+.alphabet {
+	margin-bottom: 60px;
+	@include respond-to(small-all) {
+		margin-bottom: 30px;
+	}
+
+
+	&__list {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+
+	&__item {
+		float: left;
+		width: calc(100% / 33);
+		text-align: center;
+		border: 2px solid transparent;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		@include respond-to(large) {
+			width: calc(100% / 22);
+		}
+		@include respond-to(medium-all) {
+			width: calc(100% / 11);
+		}
+		@include respond-to(small-all) {
+			flex: 1 30px;
+		}
+
+
+		&.active {
+			border: 2px solid $c-cerulean;
+		}
+	}
+
+
+	&__btn {
+		text-transform: uppercase;
+		color: $c-dim_gray;
+
+
+		.active & {
+			color: $c-cerulean;
+		}
+
+
+		&:hover {
+			color: $c-shakespeare;
+			transition: all .3s ease-in-out;
+		}
+	}
+}

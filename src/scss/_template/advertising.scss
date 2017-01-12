@@ -23,67 +23,11 @@ $f-PN_bold          : return-value(fonts, PN_bold);
 
 
 	.blocks__internal &{
-		.advertising__top {
-			@include respond-to(medium) {
-				float: right;
-				width: 300px;
-			}
-		}
 		.advertising__bottom {
 			@include respond-to(medium) {
 				float: left;
 				width: 50%;
 			}
-		}
-	}
-
-
-	&__top {
-		max-width: 300px;
-		height: 250px;
-		margin-left: auto;
-		margin-right: auto;
-		background-color: $c-eclipse;
-		margin-bottom: 40px;
-		overflow: hidden;
-		@include respond-to(extra-small) {
-			max-width: 320px;
-		}
-	}
-
-
-	&__title {
-		font: {
-			size: 25px;
-			family: $f-PN_black;
-		}
-		text-transform: uppercase;
-		color: $c-shakespeare;
-		line-height: 1;
-		position: relative;
-
-
-		&:hover {
-			cursor: pointer;
-			color: $c-cerulean;
-			transition: all .3s ease-in-out;
-
-
-			&:after {
-				background-color: $c-cerulean;
-				transition: all .3s ease-in-out;
-			}
-		}
-
-
-		&:after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			bottom: -3px;
-			left: 1px;
-			height: 8px;
-			background-color: $c-shakespeare;
 		}
 	}
 

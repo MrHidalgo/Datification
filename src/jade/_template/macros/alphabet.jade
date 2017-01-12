@@ -1,0 +1,29 @@
+-
+    var dictionaryLatter = [
+        "а", "б", "в", "г", "д",
+        "е", "ё", "ж", "з", "и",
+        "й", "к", "л", "м", "н",
+        "о", "п", "р", "с", "т",
+        "у", "ф", "х", "ц", "ч",
+        "ш", "щ", "ъ", "ы", "ь",
+        "э", "ю", "я"
+    ];
+
+
+.alphabet
+    ul.alphabet__list.clearfix
+        -for(var i = 0; i < dictionaryLatter.length; i++)
+            if(i === 0)
+                li.alphabet__item.clearfix.active
+                    a(
+                        href="javascript:void(0);",
+                        title="",
+                        class="alphabet__btn"
+                    )!= dictionaryLatter[i]
+            else
+                li.alphabet__item.clearfix
+                    a(
+                        href="javascript:void(0);",
+                        title="",
+                        class="alphabet__btn"
+                    )!= dictionaryLatter[i]
