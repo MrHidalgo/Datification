@@ -9,6 +9,8 @@ $c-eclipse          : return-value(color, eclipse);
 $c-nobel            : return-value(color, nobel);
 $c-shakespeare      : return-value(color, shakespeare);
 $c-cerulean         : return-value(color, cerulean);
+$c-night_rider      : return-value(color, night_rider);
+$c-white_smoke      : return-value(color, white_smoke);
 
 $f-PN_bold          : return-value(fonts, PN_bold);
 $f-PN_black         : return-value(fonts, PN_black);
@@ -242,6 +244,40 @@ body.fixed {
 	padding-top: 190px;
 }
 
+
+/* btn go to top */
+.btn__top {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 190px;
+	left: -62px;
+	background-color: $c-white_smoke;
+	@include mixinDimensions(168px, 46px);
+	line-height: 46px;
+	border: 2px solid $c-night_rider;
+	font-family: $f-PN_bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-transform: uppercase;
+	transform: rotate(-90deg);
+
+
+	&:after {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+		margin-left: 15px;
+		@include retina-sprite($sp-i-arr-top-group);
+	}
+}
+@media screen and (max-width: 1299px) {
+	.btn__top {
+		display: none;
+	}
+}
 
 @media screen and (min-width: 1320px) {
 	.btn__fb {

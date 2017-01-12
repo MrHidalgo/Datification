@@ -6,10 +6,19 @@ function scrollWindowNavigationFixedLarge() {
     if (countScroll > 110) {
         body.addClass("fixed");
         navigationBlock.addClass("slideInDown");
-    }
-    else {
+    } else {
         body.removeClass("fixed");
         navigationBlock.removeClass("slideInDown");
+    }
+}
+
+function fadeInBtnGoToTop() {
+    var countScroll = $(window).scrollTop();
+
+    if(countScroll > 200) {
+        $(".btn__top").fadeIn('500');
+    } else {
+        $(".btn__top").fadeOut('300');
     }
 }
 
@@ -17,6 +26,21 @@ function scrollWindowNavigationFixedLarge() {
 $(window).on("load resize ready scroll", function(){
     if($(window).width() > '1024') {
         scrollWindowNavigationFixedLarge();
+    }
+    if($(window).width() > '1290') {
+        fadeInBtnGoToTop();
+    }
+
+    var offsetContainerLeft = $(".blocks__fixed").offset().left;
+
+    // btn w:168, h:46 if rotate(90deg) then offset().left - ((w & h) / 2)
+
+    if($(window).width() > '1299') {
+        $('.btn__top').css(
+            {
+                "left" : offsetContainerLeft - (84 + 23)
+            }
+        );
     }
 });
 
@@ -42,7 +66,7 @@ $(document).ready(function() {
 
 
     /* LOGO CLICK SCROLL TO TOP */
-    $(".logotype").on("click", function(e) {
+    $(".logotype, .btn__top").on("click", function(e) {
         $('body,html').animate(
             {
                 scrollTop: 0

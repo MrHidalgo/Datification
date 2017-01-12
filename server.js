@@ -1,7 +1,7 @@
 var	express	    =	require('express'),
     app         =	express();
 
-app.set('port',	(process.env.PORT	||	33333));
+app.set('port',	(process.env.PORT	||	3333));
 
 
 // MAIN PAGE

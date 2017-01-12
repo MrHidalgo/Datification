@@ -403,7 +403,7 @@
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -458px;
+  background-position: 0px -481px;
   width: 22px;
   height: 20px;
 }
@@ -412,7 +412,7 @@
   
   .search__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -422,7 +422,7 @@
     position: relative;
     top: 1px;
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -442px;
+    background-position: 0px -465px;
     width: 12px;
     height: 11px;
   }
@@ -432,7 +432,7 @@
   
   .search__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -551,7 +551,7 @@ input[name="search"]::placeholder {
 
 .lang.active .lang__btn-icon {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -339px;
+  background-position: 0px -362px;
   width: 19px;
   height: 16px;
 }
@@ -560,7 +560,7 @@ input[name="search"]::placeholder {
   
   .lang.active .lang__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -621,7 +621,7 @@ input[name="search"]::placeholder {
   top: -1px;
   margin-left: 7px;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -381px;
+  background-position: 0px -404px;
   width: 19px;
   height: 16px;
 }
@@ -630,7 +630,7 @@ input[name="search"]::placeholder {
   
   .lang__btn-icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -649,7 +649,7 @@ input[name="search"]::placeholder {
   right: 3px;
   margin: auto;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -360px;
+  background-position: 0px -383px;
   width: 19px;
   height: 16px;
   opacity: 0;
@@ -659,7 +659,7 @@ input[name="search"]::placeholder {
   
   .lang__btn-icon_hover {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -817,7 +817,7 @@ input[name="search"]::placeholder {
   left: 20px;
   top: 17px;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -266px;
+  background-position: 0px -289px;
   width: 18px;
   height: 22px;
 }
@@ -826,7 +826,7 @@ input[name="search"]::placeholder {
   
   .header__btn:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1470,7 +1470,7 @@ input[name="search"]::placeholder {
   top: -13px;
   right: -18px;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -293px;
+  background-position: 0px -316px;
   width: 20px;
   height: 20px;
 }
@@ -1479,7 +1479,7 @@ input[name="search"]::placeholder {
   
   .dictionary__sub-title_first:after {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1509,7 +1509,7 @@ input[name="search"]::placeholder {
   top: 1px;
   left: -25px;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -293px;
+  background-position: 0px -316px;
   width: 20px;
   height: 20px;
 }
@@ -1518,7 +1518,7 @@ input[name="search"]::placeholder {
   
   .dictionary__sub-desc_first:after {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1534,7 +1534,7 @@ input[name="search"]::placeholder {
   top: 14px;
   right: 10px;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -483px;
+  background-position: 0px -506px;
   width: 12px;
   height: 14px;
 }
@@ -1543,7 +1543,7 @@ input[name="search"]::placeholder {
   
   .dictionary__more:after {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1720,7 +1720,7 @@ input[name="search"]::placeholder {
 
 .owl-prev:before {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -203px;
+  background-position: 0px -226px;
   width: 7px;
   height: 16px;
 }
@@ -1729,7 +1729,7 @@ input[name="search"]::placeholder {
   
   .owl-prev:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1737,7 +1737,7 @@ input[name="search"]::placeholder {
   
   .owl-prev:before {
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -169px;
+    background-position: 0px -192px;
     width: 12px;
     height: 29px;
   }
@@ -1747,14 +1747,14 @@ input[name="search"]::placeholder {
   
   .owl-prev:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
 
 .owl-prev:hover:before, .owl-prev:active:before {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -114px;
+  background-position: 0px -137px;
   width: 7px;
   height: 16px;
 }
@@ -1763,7 +1763,7 @@ input[name="search"]::placeholder {
   
   .owl-prev:hover:before, .owl-prev:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1771,7 +1771,7 @@ input[name="search"]::placeholder {
   
   .owl-prev:hover:before, .owl-prev:active:before {
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -135px;
+    background-position: 0px -158px;
     width: 12px;
     height: 29px;
   }
@@ -1781,7 +1781,7 @@ input[name="search"]::placeholder {
   
   .owl-prev:hover:before, .owl-prev:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1793,7 +1793,7 @@ input[name="search"]::placeholder {
 
 .owl-next:before {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -93px;
+  background-position: 0px -116px;
   width: 7px;
   height: 16px;
 }
@@ -1802,7 +1802,7 @@ input[name="search"]::placeholder {
   
   .owl-next:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1810,7 +1810,7 @@ input[name="search"]::placeholder {
   
   .owl-next:before {
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -57px;
+    background-position: 0px -80px;
     width: 12px;
     height: 31px;
   }
@@ -1820,14 +1820,14 @@ input[name="search"]::placeholder {
   
   .owl-next:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
 
 .owl-next:hover:before, .owl-next:active:before {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px 0px;
+  background-position: 0px -23px;
   width: 7px;
   height: 16px;
 }
@@ -1836,7 +1836,7 @@ input[name="search"]::placeholder {
   
   .owl-next:hover:before, .owl-next:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -1844,7 +1844,7 @@ input[name="search"]::placeholder {
   
   .owl-next:hover:before, .owl-next:active:before {
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -21px;
+    background-position: 0px -44px;
     width: 12px;
     height: 31px;
   }
@@ -1854,7 +1854,7 @@ input[name="search"]::placeholder {
   
   .owl-next:hover:before, .owl-next:active:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -2143,7 +2143,7 @@ input[name="search"]::placeholder {
   margin-top: 10px;
   margin-left: 30px;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -402px;
+  background-position: 0px -425px;
   width: 45px;
   height: 35px;
 }
@@ -2152,7 +2152,7 @@ input[name="search"]::placeholder {
   
   .footer__icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -2174,7 +2174,7 @@ input[name="search"]::placeholder {
   right: 0;
   margin: auto;
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -318px;
+  background-position: 0px -341px;
   width: 8px;
   height: 16px;
 }
@@ -2183,7 +2183,7 @@ input[name="search"]::placeholder {
   
   .footer__btn-fb:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -2435,7 +2435,7 @@ input[name="search"]::placeholder {
 
 .block__info-data .icon {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -224px;
+  background-position: 0px -247px;
   width: 17px;
   height: 17px;
 }
@@ -2444,7 +2444,7 @@ input[name="search"]::placeholder {
   
   .block__info-data .icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -2463,7 +2463,7 @@ input[name="search"]::placeholder {
 
 .block__info-see .icon {
   background-image: url(../img/sprite_dat.png);
-  background-position: 0px -246px;
+  background-position: 0px -269px;
   width: 24px;
   height: 15px;
 }
@@ -2472,7 +2472,7 @@ input[name="search"]::placeholder {
   
   .block__info-see .icon {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
@@ -2569,6 +2569,57 @@ body.fixed {
   padding-top: 190px;
 }
 
+
+
+.btn__top {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 190px;
+  left: -62px;
+  background-color: #f7f7f7;
+  width: 168px;
+  height: 46px;
+  line-height: 46px;
+  border: 2px solid #333;
+  font-family: "Proxima Nova Bold";
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+
+.btn__top:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  margin-left: 15px;
+  background-image: url(../img/sprite_dat.png);
+  background-position: 0px 0px;
+  width: 56px;
+  height: 18px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  
+  .btn__top:after {
+    background-image: url(../img/sprite_dat@2x.png);
+    background-size: 56px 520px;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  
+  .btn__top {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1320px) {
   
   .btn__fb {
@@ -2590,7 +2641,7 @@ body.fixed {
     right: 5px;
     margin: auto;
     background-image: url(../img/sprite_dat.png);
-    background-position: 0px -318px;
+    background-position: 0px -341px;
     width: 8px;
     height: 16px;
   }
@@ -2600,7 +2651,7 @@ body.fixed {
   
   .btn__fb:before {
     background-image: url(../img/sprite_dat@2x.png);
-    background-size: 45px 497px;
+    background-size: 56px 520px;
   }
 }
 
